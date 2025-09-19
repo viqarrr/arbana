@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+
+@plugin "flowbite/plugin";
+
+@source "../../node_modules/flowbite";
+@source "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "./vendor/laravel/jetstream/**/*.blade.php";
+@source "./storage/framework/views/*.php";
+@source "./resources/views/**/*.blade.php";
+
+@theme {
+    --color-primary: #f7f0d6;
+    --color-secondary: #282829;
+    --font-display: "Poppins", sans-serif;
+}
+
+[x-cloak] {
+    display: none;
+}
+
+[data-carousel-item] {
+  transform: none !important;
+}
