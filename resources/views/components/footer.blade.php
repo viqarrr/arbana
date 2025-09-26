@@ -1,12 +1,12 @@
 <!-- Footer -->
-<footer class="bg-neutral-900 text-neutral-300 mt-20">
+<footer class="bg-neutral-900 text-neutral-300">
   <div class="mx-auto max-w-7xl px-6 py-12">
     <!-- Flex Container -->
     <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
       <!-- Logo & Deskripsi -->
       <div class="footer-logo md:w-1/4">
         <img
-          src="{{ url('storage/images/arbana real.png') }}"
+          src="{{ url('storage/images/arbana outdoor real.png') }}"
           alt="Company Logo"
           class="mb-4 w-24"
         />
@@ -21,55 +21,24 @@
         <h3 class="text-white mb-4 text-lg font-semibold">Quick Links</h3>
         <ul class="space-y-2">
           <li><a
-              href="#"
+              href="/"
               class="transition hover:text-primary"
             >Home</a></li>
           <li><a
-              href="#"
+              href="/about"
               class="transition hover:text-primary"
             >About</a></li>
           <li>
             <a
-              href="#"
-              class="transition hover:text-primary"
-            >Gallery</a>
-          </li>
-          <li>
-            <a
-              href="#"
+              href="/products"
               class="transition hover:text-primary"
             >Product</a>
           </li>
-        </ul>
-      </div>
-
-      <!-- Servis -->
-      <div class="footer-servis">
-        <h3 class="text-white mb-4 text-lg font-semibold">Service</h3>
-        <ul class="space-y-2">
           <li>
             <a
-              href="#"
+              href="/services"
               class="transition hover:text-primary"
-            >Open trip</a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="transition hover:text-primary"
-            >Private trip</a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="transition hover:text-primary"
-            >Family gathering</a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="transition hover:text-primary"
-            >Camping ground</a>
+            >Service</a>
           </li>
         </ul>
       </div>

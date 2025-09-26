@@ -56,7 +56,7 @@
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Nikmati pesona empat gunung megah di Malang Raya
+                  Experience the charm of four majestic mountains in Malang Raya
                 </p>
               </div>
 
@@ -96,7 +96,7 @@
         <div class="absolute left-1/2 top-1/2 block h-screen w-full -translate-x-1/2 -translate-y-1/2">
           <div
             class="-z-1 flex h-full items-center bg-cover bg-top bg-no-repeat"
-            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/Kelut.webp') }}');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/Kelut.jpg') }}');"
           >
             <div class="flex max-w-7xl flex-col items-start px-4 sm:px-6 lg:px-24">
               <!-- Announcement Banner -->
@@ -142,7 +142,7 @@
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Nikmati pesona empat gunung megah di Malang Raya
+                 Experience the charm of four majestic mountains in Malang Raya
                 </p>
               </div>
 
@@ -314,7 +314,7 @@
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Nikmati pesona empat gunung megah di Malang Raya
+                  Experience the charm of four majestic mountains in Malang Raya
                 </p>
               </div>
 
@@ -400,7 +400,7 @@
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Nikmati pesona empat gunung megah di Malang Raya
+                  Experience the charm of four majestic mountains in Malang Raya
                 </p>
               </div>
 
