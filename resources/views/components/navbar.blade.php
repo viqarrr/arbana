@@ -51,6 +51,9 @@
                     <a href="/services" class="text-white hover:text-amber-300">Service</a>
                 </li>
                 <li>
+                    <a href="/news" class="text-white hover:text-amber-300">News</a>
+                </li>
+                <li>
                     <a href="https://wa.me/6288994300480" class="block md:hidden text-white hover:text-amber-300">Contact</a>
                 </li>
 

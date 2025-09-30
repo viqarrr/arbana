@@ -5,11 +5,7 @@
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
           <p class="text-lg leading-relaxed mb-4">
-            Arbana Oudoor lahir dari kecintaan terhadap alam dan semangat untuk
-            memperkenalkan keindahan Gunung Bromo kepada dunia. Sejak 2010, kami
-            telah membantu ribuan wisatawan menjelajahi lanskap menakjubkan,
-            dari golden sunrise di Penanjakan hingga hamparan pasir lautan di
-            kaki gunung.
+            Arbana Outdoor was born out of a deep love for nature and a passion to share the beauty of Mount Bromo with the world. Since 2010, we have guided thousands of travelers through breathtaking landscapes—from the golden sunrise at Penanjakan to the vast sea of sand at the mountain’s base.
           </p>
           <p class="text-lg leading-relaxed">
             For us, a journey is not just about the destination, but about the stories created, the friendships built, and the moments that will be cherished forever. That’s why every trip we design is crafted with heart and the finest details.

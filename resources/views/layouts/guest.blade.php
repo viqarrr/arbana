@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="description" content="Ready To Go Explore the beauty of nature? Arbana Outdoor Is Ready TO Help">
+      <meta name="keywords" content="arbana outdoor, camping, argapuro, rental alat, guide, gunung, arbana, arbana-outdoor, mendaki, beli tiket pendakian, outdoor, arbanaa, arbanaaaa, arbana website, Outdoor Arbana">
+      <meta name="author" content="Arbana Outdoor">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" type="image/png" href="https://arbanaoutdoor.com/storage/images/arbana%20outdoor%20real.png">
+
+    <title>Arbana Outdoor</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -35,7 +40,7 @@
     @livewireStyles
 </head>
 
-<body >
+<body class="" style="overflow-x: clip;">
     <x-navbar></x-navbar>
     <x-chat-bot></x-chat-bot>
     <x-feedback></x-feedback>

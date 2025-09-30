@@ -1,367 +1,681 @@
-<x-guest-layout>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="">
+
+    <title>Open Trip Detail</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap"
+        rel="stylesheet" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CDN Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css" />
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+    
+      <link rel="icon" type="image/png" href="https://arbanaoutdoor.com/storage/images/arbana%20outdoor%20real.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Styles -->
+    @livewireStyles
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800" style="overflow-x: hidden;">
+    <!-- Navigation Bar -->
+    <x-navbar></x-navbar>
+    <x-chat-bot></x-chat-bot>
+    <x-feedback></x-feedback>
+
+    <!-- Carousel -->
+    <div class="flex justify-center my-9">
+        <div class="relative w-full max-w-5xl">
+            <div class="swiper mySwiper w-full rounded-xl shadow-lg overflow-hidden">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="{{Asset('storage/images/kook1.jpg')}}" alt="Panorama Gunung Argapuro"
+                            class="w-full h-64 md:h-[450px] object-cover rounded-xl" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{Asset('storage/images/kook2.jpg')}}" alt="Gunung Argapuro"
+                            class="w-full h-64 md:h-[450px] object-cover rounded-xl" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{Asset('storage/images/kook4.jpg')}}"
+                            class="w-full h-64 md:h-[450px] object-cover rounded-xl" />
+                    </div>
+                </div>
+
+                <!-- Navigation & pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
     <main class="max-w-screen-xl mx-auto p-4">
+        <!-- Container -->
         <div class="w-full flex justify-center">
+            <!-- Main Column -->
             <div class="space-y-6 w-full md:w-5/6 lg:w-4/5 mx-auto">
-                <x-trip-detail.hero></x-trip-detail.hero>
-                <x-trip-detail.title></x-trip-detail.title>
-                <x-trip-detail.info></x-trip-detail.info>
-                <x-trip-detail.overview></x-trip-detail.overview>
-                <x-trip-detail.package></x-trip-detail.package>
-                <x-trip-detail.additional></x-trip-detail.additional>
-                <x-trip-detail.summary></x-trip-detail.summary>
+                
+                <!-- Title + Schedule -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">Open Trip</span>
+                    <h2 class="text-4xl font-bold mt-4 text-center">Mount Kelud</h2>
+                    <hr class="my-6 border-gray-300">
+                    <div class="bg-white p-6 rounded-xl shadow grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                        <div><p class="font-semibold">Lokasi</p><p class="text-sm text-gray-600">Jawa Timur</p></div>
+                        <div><p class="font-semibold">Titik Kumpul</p><p class="text-sm text-gray-600">Blitar</p></div>
+                        <div><p class="font-semibold">MDPL</p><p class="text-sm text-gray-600">1731 mdpl</p></div>
+                    </div>
+                </div>
+
+                <!-- Detail Info -->
+                
+
+                <!-- Destination Overview -->
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <h3 class="font-semibold mb-2">Sekilas Destinasi</h3>
+                    <p class="text-gray-700 text-sm">
+                        Nikmati pengalaman wisata mendaki Gunung Argapuro. Dalam tur sehari ini, Anda akan diajak menjelajahi keindahan alam yang memukau dengan pemandangan spektakuler dan udara segar pegunungan.
+                    </p>
+                </div>
+
+                <!-- Rules -->
+                <div class="bg-white p-6 rounded-xl shadow mt-6">
+                    <h3 class="text-xl font-bold mb-4">Peraturan Pendakian Argopuro</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700 text-sm">
+                        <li>Peserta wajib menjaga kebersihan dan tidak meninggalkan sampah di jalur pendakian.</li>
+                        <li>Dilarang merusak flora, fauna, atau fasilitas umum di kawasan gunung.</li>
+                        <li>Wajib mengikuti arahan guide selama pendakian berlangsung.</li>
+                        <li>Peserta dengan kondisi kesehatan tertentu wajib melapor sebelum keberangkatan.</li>
+                        <li>Dilarang membawa minuman beralkohol, narkoba, atau senjata tajam yang berbahaya.</li>
+                        <li>Gunakan perlengkapan pendakian standar untuk keamanan diri.</li>
+                    </ul>
+                </div>
+
+                <!-- Facilities -->
+                <div class="bg-white p-6 rounded-xl shadow mt-6">
+                    <h3 class="text-xl font-bold mb-4">Fasilitas</h3> 
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-green-600 mb-3">Include</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600">✓</span>Transportasi PP</li>
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600">✓</span>Makan 3x</li>
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600">✓</span>Tiket masuk wisata</li>
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-600">✓</span>Guide berpengalaman</li>
+                        </ul>
+                    </div>
+                    <hr class="my-6 border-gray-300">
+                    <div>
+                        <h4 class="font-semibold text-red-600 mb-3">Exclude</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-600">✕</span>Pengeluaran pribadi</li>
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-600">✕</span>Sewa perlengkapan pribadi</li>
+                            <li class="flex items-center gap-2"><span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-600">✕</span>Tips guide</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg mt-6">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">Pilih Tanggal</h3>
+                    
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                            
+                            <!-- Date inputs -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-auto">
+                                <input 
+                                    type="text" 
+                                    id="startDate" 
+                                    placeholder="Tanggal Mulai" 
+                                    class="border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-4 py-2 rounded-lg w-full transition"
+                                />
+                                <input 
+                                    type="text" 
+                                    id="endDate" 
+                                    placeholder="Tanggal Berakhir" 
+                                    class="border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 px-4 py-2 rounded-lg w-full transition"
+                                />
+                            </div>
+                    
+                            <!-- Member count -->
+                            <div class="flex flex-col md:flex-row md:items-center md:gap-4 w-full md:w-auto">
+                                <span id="summary-member-count" class="font-semibold text-gray-800 text-center md:text-left">5 orang</span>
+                                <div class="flex justify-center md:justify-start gap-3 mt-3 md:mt-0">
+                                    <button id="decrease-member" style="width: 40px; height: 40px;"
+                                        class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold px-4 py-2 flex justify-center items-center rounded-full transition">
+                                        -
+                                    </button>
+                                    <button id="increase-member" style="width: 40px; height: 40px;"
+                                        class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 flex justify-center items-center rounded-full transition">
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- Additional Products -->
+                <div class="bg-white p-6 rounded-xl shadow mt-6">
+                    <h3 class="text-xl font-bold mb-4">Alat Tambahan</h3>
+
+                    <!-- Trigger Dropdown -->
+                    <input type="checkbox" id="toggle-products" class="peer hidden">
+                    <label for="toggle-products" 
+                        class="flex justify-between items-center p-3 border rounded-lg cursor-pointer">
+                        <span class="font-semibold text-gray-800">Lihat Daftar Produk</span>
+                        <span class="transition-transform duration-300 peer-checked:rotate-90">➤</span>
+                    </label>
+
+                    <!-- Dropdown Content -->
+                    <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out peer-checked:max-h-[500px] peer-checked:mt-4 space-y-3">
+
+                        <!-- Tripod -->
+                        <div class="border rounded-xl p-4 shadow-sm flex items-center justify-between text-sm font-medium text-gray-700">
+                            <div class="flex items-center gap-2 w-1/4">
+                                <input type="checkbox" id="check-tripod" class="w-5 h-5 border-2 border-indigo-500">
+                                <label for="check-tripod" class="font-semibold text-gray-800">Tripod</label>
+                            </div>
+                            <div id="detail-tripod" class="flex items-center justify-between w-3/4 gap-4 hidden">
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Durasi Sewa</label>
+                                    <span id="duration-tripod" class="px-3 py-1 bg-gray-100 rounded text-center font-semibold min-w-[60px]">0 hari</span>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Total Barang</label>
+                                    <button id="decrease-tripod" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                                    <span id="qty-item-tripod" class="w-6 text-center font-semibold">1</span>
+                                    <button id="increase-tripod" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                                </div>
+                                <span id="price-tripod" class="text-green-600 font-bold text-center">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <!-- Lampu Camping -->
+                        <div class="border rounded-xl p-4 shadow-sm flex items-center justify-between text-sm font-medium text-gray-700">
+                            <div class="flex items-center gap-2 w-1/4">
+                                <input type="checkbox" id="check-lampu" class="w-5 h-5 border-2 border-indigo-500">
+                                <label for="check-lampu" class="font-semibold text-gray-800">Lampu Camping</label>
+                            </div>
+                            <div id="detail-lampu" class="flex items-center justify-between w-3/4 gap-4 hidden">
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Durasi Sewa</label>
+                                    <span id="duration-lampu" class="px-3 py-1 bg-gray-100 rounded text-center font-semibold min-w-[60px]">0 hari</span>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Total Barang</label>
+                                    <button id="decrease-lampu" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                                    <span id="qty-item-lampu" class="w-6 text-center font-semibold">1</span>
+                                    <button id="increase-lampu" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                                </div>
+                                <span id="price-lampu" class="text-green-600 font-bold text-center">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <!-- Matras -->
+                        <div class="border rounded-xl p-4 shadow-sm flex items-center justify-between text-sm font-medium text-gray-700">
+                            <div class="flex items-center gap-2 w-1/4">
+                                <input type="checkbox" id="check-matras" class="w-5 h-5 border-2 border-indigo-500">
+                                <label for="check-matras" class="font-semibold text-gray-800">Matras</label>
+                            </div>
+                            <div id="detail-matras" class="flex items-center justify-between w-3/4 gap-4 hidden">
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Durasi Sewa</label>
+                                    <span id="duration-matras" class="px-3 py-1 bg-gray-100 rounded text-center font-semibold min-w-[60px]">0 hari</span>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Total Barang</label>
+                                    <button id="decrease-matras" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                                    <span id="qty-item-matras" class="w-6 text-center font-semibold">1</span>
+                                    <button id="increase-matras" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                                </div>
+                                <span id="price-matras" class="text-green-600 font-bold text-center">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <!-- Kompor -->
+                        <div class="border rounded-xl p-4 shadow-sm flex items-center justify-between text-sm font-medium text-gray-700">
+                            <div class="flex items-center gap-2 w-1/4">
+                                <input type="checkbox" id="check-kompor" class="w-5 h-5 border-2 border-indigo-500">
+                                <label for="check-kompor" class="font-semibold text-gray-800">Kompor</label>
+                            </div>
+                            <div id="detail-kompor" class="flex items-center justify-between w-3/4 gap-4 hidden">
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Durasi Sewa</label>
+                                    <span id="duration-kompor" class="px-3 py-1 bg-gray-100 rounded text-center font-semibold min-w-[60px]">0 hari</span>
+                                </div>
+                                <div class="flex items-center justify-center gap-2">
+                                    <label class="block text-sm font-medium text-gray-700">Total Barang</label>
+                                    <button id="decrease-kompor" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                                    <span id="qty-item-kompor" class="w-6 text-center font-semibold">1</span>
+                                    <button id="increase-kompor" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                                </div>
+                                <span id="price-kompor" class="text-green-600 font-bold text-center">Rp 0</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Additional Services -->
+                <div class="bg-white p-6 rounded-xl shadow mt-6">
+                    <h3 class="text-xl font-bold mb-4">Services Additional</h3>
+
+                    <!-- Trigger Dropdown -->
+                    <input type="checkbox" id="toggle-services" class="peer hidden">
+                    <label for="toggle-services" 
+                            class="flex justify-between items-center p-3 border rounded-lg cursor-pointer">
+                        <span class="font-semibold text-gray-800">Lihat Daftar Service</span>
+                        <span class="transition-transform duration-300 peer-checked:rotate-90">➤</span>
+                    </label>
+
+                    <!-- Dropdown Content -->
+                    <div class="mt-3 space-y-4 max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-300">
+                        
+                        <!-- Porter -->
+                        <div class="flex flex-col border p-3 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" id="check-porter" class="w-5 h-5 border-2 border-indigo-500">
+                                    <div class="flex flex-col">
+                                        <label for="check-porter" class="font-semibold text-gray-800">Porter</label>
+                                        <span class="text-xs text-gray-500">Maksimal barang = 30kg</span>
+                                    </div>
+                                </div>
+
+                                <div id="detail-porter" class="flex items-center gap-2 hidden">
+                                    <span class="text-sm text-gray-500 ml-2">Jumlah Porter:</span>
+                                    <button id="decrease-porter" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                                    <span id="qty-item-porter" class="w-6 text-center font-semibold">1</span>
+                                    <button id="increase-porter" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                                    <span id="price-porter" class="text-green-600 font-bold">Rp 100.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guide -->
+                        <div class="flex flex-col border p-3 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" id="check-guide" class="w-5 h-5 border-2 border-indigo-500">
+                                    <div class="flex flex-col">
+                                        <label for="check-guide" class="font-semibold text-gray-800">Guide</label>
+                                        <span class="text-xs text-gray-500">Minimal = 1 orang, Maksimal = 15 orang</span>
+                                    </div>
+                                </div>
+                                <div id="detail-guide" class="flex items-center gap-2 hidden">
+                                    <button id="decrease-guide" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+                                    <span id="qty-item-guide" class="w-6 text-center font-semibold">1</span>
+                                    <button id="increase-guide" class="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+                                    <span id="price-guide" class="text-green-600 font-bold">Rp 100.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="bg-white p-6 rounded-xl shadow mt-6">
+                    <h3 class="text-xl font-bold mb-4">Ringkasan Pesanan</h3>
+                    <div id="summary-list" class="space-y-2 text-sm text-gray-700"></div>
+                    <p id="summary" class="text-sm text-gray-600 mt-3">Kamu belum memilih tanggal.</p>
+                    <div class="flex justify-between items-center font-semibold mt-4">
+                        <span>Total</span>
+                        <span id="total-price" class="text-green-600">Rp 250.000</span>
+                    </div>
+                    <div class="flex justify-end mt-4">
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Book Now</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </main>
+
+    <!-- Footer -->
+    <x-footer></x-footer>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            /* =========================
-               DATA & STATE
-               ========================= */
-            const paketData = {
-                reguler: {
-                    include: ["Transportasi PP", "Makan 3x", "Tiket masuk wisata"],
-                    exclude: ["Pengeluaran pribadi", "Sewa perlengkapan pribadi"]
-                },
-                premium: {
-                    include: ["Transportasi PP", "Makan 3x", "Tiket masuk wisata", "Gratis Sewa 1 tenda"],
-                    exclude: ["Pengeluaran pribadi", "Alat pribadi tambahan diluar paket"]
-                },
-                exclusive: {
-                    include: ["Transportasi PP", "Makan 3x", "Tiket masuk wisata", "Gratis Sewa 1 tenda",
-                        "Porter & Guide otomatis termasuk paket"
-                    ],
-                    exclude: ["Pengeluaran pribadi", "Sewa perlengkapan pribadi", "Biaya tambahan diluar paket"]
-                }
-            };
-            const paketHarga = {
-                reguler: 250000,
-                premium: 360000,
-                exclusive: 700000
-            };
-            const basePrices = {
-                tripod: 15000,
-                lampu: 10000,
-                matras: 10000,
-                kompor: 20000
-            };
+        // ==================== GLOBAL VARIABLES ====================
+        const basePrices = { 
+            tripod: 15000, 
+            lampu: 10000, 
+            matras: 10000, 
+            kompor: 20000,
+            porter: 100000,
+            guide: 100000
+        };
+        const pricePerPerson = 50000; // Harga per orang
+        let tripDuration = 0;
+        let memberCount = 5;
+        const maxMembers = 25;
 
-            let selectedPaket = "reguler";
-            const bookedDates = []; // tanggal yang dipilih (YYYY-MM-DD)
-            let memberCount = 1;
+        // DOM Elements
+        const summaryEl = document.getElementById("summary");
+        const startInput = document.getElementById("startDate");
+        const endInput = document.getElementById("endDate");
+        const memberCountEl = document.getElementById("summary-member-count");
+        const increaseBtn = document.getElementById("increase-member");
+        const decreaseBtn = document.getElementById("decrease-member");
 
-            /* =========================
-               HELPERS
-               ========================= */
-            function capitalize(s) {
-                return s.charAt(0).toUpperCase() + s.slice(1);
-            }
+        // ==================== MOBILE MENU ====================
+        const btn = document.getElementById("menu-btn");
+        const menu123 = document.getElementById("mobile-menu");
+        if (btn && menu123) {
+            btn.addEventListener("click", () => menu123.classList.toggle("hidden"));
+        }
 
-            function getDurationNights() {
-                return bookedDates.length > 1 ? bookedDates.length - 1 : 1;
-            }
+        function toggleMobileDropdown() {
+            const dropdown = document.getElementById("mobile-dropdown");
+            const icon = document.getElementById("mobile-dropdown-icon");
+            if (dropdown) dropdown.classList.toggle("hidden");
+            if (icon) icon.classList.toggle("rotate-180");
+        }
 
-            function toIDDateStr(d) {
-                return d.toISOString().split("T")[0];
-            }
+        // ==================== UTILITY FUNCTIONS ====================
+        function toggleProduct(product) {
+            const checkEl = document.getElementById(`check-${product}`);
+            const detailEl = document.getElementById(`detail-${product}`);
+            const qtyItemEl = document.getElementById(`qty-item-${product}`);
 
-            /* =========================
-               CACHE DOM
-               ========================= */
-            const jadwalContainer = document.getElementById("jadwal");
-            const paketContainer = document.getElementById("paketContainer");
-            const paketDetail = document.getElementById("paketDetail");
-            const summaryList = document.getElementById("summary-list");
-            const ringkasanEl = document.getElementById("ringkasan-pesanan");
-            const memberCountEl = document.getElementById("summary-member-count");
-            const increaseBtn = document.getElementById("increase-member");
-            const decreaseBtn = document.getElementById("decrease-member");
-
-            /* =========================
-               JADWAL (generate 3 tanggal berikutnya sesuai allowedDays)
-               ========================= */
-            (function generateJadwal() {
-                if (!jadwalContainer) return;
-                jadwalContainer.innerHTML = "";
-                const options = {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric"
-                };
-                const today = new Date();
-                const allowedDays = [5, 6, 0]; // Fri, Sat, Sun
-                let added = 0,
-                    i = 0;
-                while (added < 3) {
-                    const date = new Date(today);
-                    date.setDate(today.getDate() + i);
-                    if (allowedDays.includes(date.getDay())) {
-                        const span = document.createElement("span");
-                        span.textContent = date.toLocaleDateString("id-ID", options);
-                        span.className =
-                            "px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-sm font-medium cursor-pointer transition";
-                        const dateStr = toIDDateStr(date);
-                        span.dataset.date = dateStr;
-                        span.addEventListener("click", () => {
-                            const idx = bookedDates.indexOf(dateStr);
-                            if (idx !== -1) {
-                                bookedDates.splice(idx, 1);
-                                span.classList.remove("bg-pink-600", "text-white");
-                                span.classList.add("bg-pink-100", "text-pink-800");
-                            } else {
-                                bookedDates.push(dateStr);
-                                bookedDates.sort();
-                                span.classList.remove("bg-pink-100", "text-pink-800");
-                                span.classList.add("bg-pink-600", "text-white");
-                            }
-                            updateSummary();
-                        });
-                        jadwalContainer.appendChild(span);
-                        added++;
+            if (checkEl.checked) {
+                detailEl.classList.remove("hidden");
+                qtyItemEl.textContent = "1";
+                
+                // Set duration for rental products
+                if (['tripod', 'lampu', 'matras', 'kompor'].includes(product)) {
+                    const durationEl = document.getElementById(`duration-${product}`);
+                    if (durationEl) {
+                        durationEl.textContent = tripDuration > 0 ? `${tripDuration} hari` : "Pilih tanggal dulu";
                     }
-                    i++;
                 }
-            })();
-
-            /* =========================
-               PAKET (generate cards + detail)
-               ========================= */
-            function generatePaketCards() {
-                if (!paketContainer) return;
-                paketContainer.innerHTML = "";
-                for (const key in paketData) {
-                    const card = document.createElement("div");
-                    card.className =
-                        "bg-white p-6 rounded-xl shadow cursor-pointer hover:scale-[1.02] transition relative";
-                    card.innerHTML = `
-        <h3 class="text-lg font-bold mb-2">${capitalize(key)}</h3>
-        <span class="absolute bottom-3 right-3 bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-semibold">
-          Rp ${paketHarga[key].toLocaleString("id-ID")}
-        </span>
-      `;
-                    card.addEventListener("click", () => showDetail(key));
-                    paketContainer.appendChild(card);
-                }
-            }
-
-            function showDetail(paket) {
-                selectedPaket = paket;
-                // highlight
-                Array.from(paketContainer.children).forEach(card => {
-                    card.classList.remove("border-2", "border-blue-500");
-                    if (card.textContent.toLowerCase().includes(paket)) card.classList.add("border-2",
-                        "border-blue-500");
-                });
-
-                paketDetail.classList.remove("hidden");
-                const includeList = paketData[paket].include.map(i => `<li>✓ ${i}</li>`).join("");
-                const excludeList = paketData[paket].exclude.map(i => `<li>✕ ${i}</li>`).join("");
-                let porterGuideHtml = "";
-
-                if (paket === "premium") {
-                    porterGuideHtml = `
-        <div class="mt-4 flex gap-4">
-          <label class="flex items-center gap-2"><input type="checkbox" id="check-porter"> Porter</label>
-          <label class="flex items-center gap-2"><input type="checkbox" id="check-guide"> Guide</label>
-        </div>
-      `;
-                } else if (paket === "exclusive") {
-                    porterGuideHtml =
-                        `<div class="mt-4 flex gap-4"><span class="px-2 py-1 bg-gray-200 rounded">Porter & Guide termasuk paket</span></div>`;
-                }
-
-                paketDetail.innerHTML = `
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-4">Fasilitas</h3>
-        <div class="mb-4">
-          <h4 class="font-semibold text-green-600 mb-3">Include</h4>
-          <ul>${includeList}</ul>
-        </div>
-        <hr class="my-6 border-gray-300">
-        <div>
-          <h4 class="font-semibold text-red-600 mb-3">Exclude</h4>
-          <ul>${excludeList}</ul>
-        </div>
-        ${porterGuideHtml}
-      </div>
-    `;
-
-                // attach listeners (jika ada)
-                document.getElementById("check-porter")?.addEventListener("change", updateSummary);
-                document.getElementById("check-guide")?.addEventListener("change", updateSummary);
-
-                updateSummary();
-            }
-
-            /* =========================
-               PRODUK TAMBAHAN (toggle, qty, price)
-               HTML sudah punya struktur check-* dan detail-* serta qty-item-* dan price-*
-               ========================= */
-            function toggleProduct(product) {
-                const checkEl = document.getElementById(`check-${product}`);
-                const detailEl = document.getElementById(`detail-${product}`);
-                const qtyEl = document.getElementById(`qty-item-${product}`);
-                const priceEl = document.getElementById(`price-${product}`);
-                if (!checkEl) return;
-                if (checkEl.checked) {
-                    detailEl?.classList.remove("hidden");
-                    if (qtyEl) qtyEl.textContent = "1";
-                    updatePrice(product);
-                } else {
-                    detailEl?.classList.add("hidden");
-                    if (qtyEl) qtyEl.textContent = "0";
-                    if (priceEl) priceEl.textContent = "Rp 0";
-                    updateSummary();
-                }
-            }
-            // expose untuk atribut onchange inline
-            window.toggleProduct = toggleProduct;
-
-            function changeQty(product, amount) {
-                const qtyEl = document.getElementById(`qty-item-${product}`);
-                if (!qtyEl) return;
-                let qty = parseInt(qtyEl.textContent) || 1;
-                qty = Math.max(1, qty + amount);
-                qtyEl.textContent = qty;
+                
                 updatePrice(product);
-            }
-            // expose untuk onclick inline
-            window.changeQty = changeQty;
-
-            function updatePrice(product) {
-                const qty = parseInt(document.getElementById(`qty-item-${product}`)?.textContent) || 1;
-                const nights = getDurationNights();
-                const total = basePrices[product] * qty * nights;
-                const priceEl = document.getElementById(`price-${product}`);
-                if (priceEl) priceEl.textContent = `Rp ${total.toLocaleString("id-ID")}`;
+            } else {
+                detailEl.classList.add("hidden");
+                qtyItemEl.textContent = "1";
+                document.getElementById(`price-${product}`).textContent = "Rp 0";
                 updateSummary();
             }
+        }
 
-            /* =========================
-               RINGKASAN (single source of truth)
-               ========================= */
-            function updateSummary() {
-                if (!summaryList) return;
-                summaryList.innerHTML = "";
-                let total = 0;
+        function changeQty(product, amount) {
+            const qtyItemEl = document.getElementById(`qty-item-${product}`);
+            let qtyItem = parseInt(qtyItemEl.textContent) || 1;
 
-                // Tanggal & durasi
-                if (bookedDates.length > 0) {
-                    bookedDates.sort();
-                    const start = new Date(bookedDates[0]);
-                    const end = new Date(bookedDates[bookedDates.length - 1]);
-                    const startStr = start.toLocaleDateString("id-ID", {
-                        day: "numeric",
-                        month: "numeric"
-                    });
-                    const endStr = end.toLocaleDateString("id-ID", {
-                        day: "numeric",
-                        month: "numeric"
-                    });
-                    const durationDays = bookedDates.length;
-                    const durationNights = Math.max(durationDays - 1, 1);
-                    summaryList.innerHTML +=
-                        `<div>${startStr}-${endStr} ${durationDays} hari ${durationNights} malam</div>`;
+            qtyItem += amount;
+            if (qtyItem < 1) qtyItem = 1;
+            qtyItemEl.textContent = qtyItem;
+            updatePrice(product);
+        }
+
+        function updatePrice(product) {
+            const qtyItemEl = document.getElementById(`qty-item-${product}`);
+            const qtyItem = parseInt(qtyItemEl.textContent) || 1;
+            const priceEl = document.getElementById(`price-${product}`);
+
+            let total = 0;
+
+            if (['tripod', 'lampu', 'matras', 'kompor'].includes(product)) {
+                // Rental products: price × quantity × duration
+                if (tripDuration > 0) {
+                    total = basePrices[product] * qtyItem * tripDuration;
                 } else {
-                    summaryList.innerHTML += `<div>Belum pilih tanggal</div>`;
+                    priceEl.textContent = "Pilih tanggal dulu";
+                    return;
                 }
+            } else {
+                // Services: price × quantity
+                total = basePrices[product] * qtyItem;
+            }
 
-                // Paket
-                if (selectedPaket && paketHarga[selectedPaket] !== undefined) {
-                    const paketPrice = paketHarga[selectedPaket];
-                    total += paketPrice;
-                    summaryList.innerHTML +=
-                        `<div>Paket: ${capitalize(selectedPaket)} (Rp ${paketPrice.toLocaleString("id-ID")})</div>`;
-                } else {
-                    summaryList.innerHTML += `<div>Belum pilih paket</div>`;
+            priceEl.textContent = `Rp ${total.toLocaleString("id-ID")}`;
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const summaryList = document.getElementById("summary-list");
+            summaryList.innerHTML = "";
+            
+            // Base trip cost (price per person × member count)
+            let baseTripCost = pricePerPerson * memberCount;
+            let total = baseTripCost;
+
+            // Add base trip cost to summary
+            const baseTripItem = document.createElement("div");
+            baseTripItem.textContent = `Trip Kelud - ${memberCount} orang × Rp ${pricePerPerson.toLocaleString("id-ID")} (Rp ${baseTripCost.toLocaleString("id-ID")})`;
+            summaryList.appendChild(baseTripItem);
+
+            // Add additional products and services
+            for (const product in basePrices) {
+                const checkEl = document.getElementById(`check-${product}`);
+                const qtyItemEl = document.getElementById(`qty-item-${product}`);
+                const priceEl = document.getElementById(`price-${product}`);
+
+                if (checkEl && checkEl.checked) {
+                    const qtyItem = parseInt(qtyItemEl.textContent) || 1;
+                    const priceText = priceEl.textContent;
+                    
+                    if (priceText !== "Pilih tanggal dulu" && priceText !== "Rp 0") {
+                        const priceNum = parseInt(priceText.replace(/[^\d]/g, "")) || 0;
+
+                        const item = document.createElement("div");
+                        if (['tripod', 'lampu', 'matras', 'kompor'].includes(product)) {
+                            item.textContent = `${capitalize(product)} - ${qtyItem} barang × ${tripDuration} hari (${priceText})`;
+                        } else {
+                            item.textContent = `${capitalize(product)} - ${qtyItem} pcs (${priceText})`;
+                        }
+
+                        summaryList.appendChild(item);
+                        total += priceNum;
+                    }
                 }
+            }
 
-                // Porter & Guide
-                const porterCheckbox = document.getElementById("check-porter");
-                const guideCheckbox = document.getElementById("check-guide");
-                if (selectedPaket === "premium") {
-                    if (porterCheckbox?.checked) summaryList.innerHTML += `<div>Porter - 1</div>`;
-                    if (guideCheckbox?.checked) summaryList.innerHTML += `<div>Guide - 1</div>`;
-                } else if (selectedPaket === "exclusive") {
-                    summaryList.innerHTML += `<div>Porter - 1</div><div>Guide - 1</div>`;
+            document.getElementById("total-price").textContent = `Rp ${total.toLocaleString("id-ID")}`;
+        }
+
+        function updateMemberSummary() {
+            memberCountEl.textContent = `${memberCount} orang`;
+            updateSummary(); // Update summary when member count changes
+        }
+
+        function capitalize(text) {
+            return text.charAt(0).toUpperCase() + text.slice(1);
+        }
+
+        // ==================== DATE PICKER FUNCTIONS ====================
+        function isWeekend(date) {
+            const d = date.getDay();
+            return d === 5 || d === 6 || d === 0; // Friday, Saturday, Sunday
+        }
+
+        function disableNonWeekend(ui) {
+            ui.querySelectorAll('.day-item').forEach(el => {
+                const t = el.dataset.time;
+                if (t) {
+                    const d = new Date(parseInt(t));
+                    if (!isWeekend(d)) {
+                        el.classList.add('is-locked');
+                        el.style.pointerEvents = "none";
+                        el.style.opacity = "0.3";
+                    }
                 }
+            });
+        }
 
-                // Produk tambahan
-                const nights = getDurationNights();
-                for (const product in basePrices) {
+        function updateTripDuration(start, end) {
+            if (start && end) {
+                tripDuration = Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1;
+                
+                // Update duration for all active products
+                ['tripod', 'lampu', 'matras', 'kompor'].forEach(product => {
+                    const durationEl = document.getElementById(`duration-${product}`);
+                    if (durationEl) {
+                        durationEl.textContent = `${tripDuration} hari`;
+                    }
+                    
+                    // Update price if product is active
                     const checkEl = document.getElementById(`check-${product}`);
                     if (checkEl && checkEl.checked) {
-                        const qty = parseInt(document.getElementById(`qty-item-${product}`)?.textContent) || 1;
-                        const priceNum = basePrices[product] * qty * nights;
-                        total += priceNum;
-                        summaryList.innerHTML +=
-                            `<div>${capitalize(product)} - ${qty} pcs × ${nights} malam (Rp ${priceNum.toLocaleString("id-ID")})</div>`;
+                        updatePrice(product);
                     }
-                }
-
-                // Anggota (display)
-                summaryList.innerHTML += `<div>Anggota: ${memberCount} orang</div>`;
-
-                // Total
-                let totalPriceEl = document.getElementById("total-price");
-                if (!totalPriceEl) {
-                    totalPriceEl = document.createElement("div");
-                    totalPriceEl.id = "total-price";
-                    totalPriceEl.className = "text-right font-bold mt-4 text-lg";
-                    ringkasanEl?.appendChild(totalPriceEl);
-                }
-                totalPriceEl.textContent = `Rp ${total.toLocaleString("id-ID")}`;
+                });
             }
+        }
 
-            /* =========================
-               MEMBER COUNT
-               ========================= */
-            function updateMemberSummary() {
-                if (memberCountEl) memberCountEl.textContent = `${memberCount} orang`;
-                updateSummary();
+        // ==================== DATE PICKER INITIALIZATION ====================
+        let startPicker, endPicker;
+
+        // Start date picker
+        startPicker = new Litepicker({
+            element: startInput,
+            format: 'DD MMMM YYYY',
+            minDate: new Date(),
+            setup: (picker) => {
+                picker.on('render', e => disableNonWeekend(e));
+                picker.on('selected', date => {
+                    if (!date || !date.dateInstance) return;
+        
+                    // Reset end picker
+                    if (endPicker) {
+                        endPicker.setDate(null);
+                    }
+                    tripDuration = 0;
+        
+                    // Set min and max for end date
+                    const start = date.dateInstance;
+                    if (endPicker) {
+                        endPicker.setMinDate(start);
+        
+                        // Maksimal 2 hari setelah start
+                        const max = new Date(start.getTime() + 2 * 24 * 60 * 60 * 1000);
+                        endPicker.setMaxDate(max);
+                        endPicker.show();
+                    }
+                });
             }
-            increaseBtn?.addEventListener("click", () => {
-                if (memberCount < 15) {
-                    memberCount++;
-                    updateMemberSummary();
-                }
-            });
-            decreaseBtn?.addEventListener("click", () => {
-                if (memberCount > 1) {
-                    memberCount--;
-                    updateMemberSummary();
-                }
-            });
-            updateMemberSummary();
-
-            /* =========================
-               HEADER MOBILE (menu + dropdown)
-               ========================= */
-            const menuBtn = document.getElementById("menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
-            menuBtn?.addEventListener("click", () => mobileMenu?.classList.toggle("hidden"));
-
-            window.toggleMobileDropdown = function() {
-                const dropdown = document.getElementById("mobile-dropdown");
-                const icon = document.getElementById("mobile-dropdown-icon");
-                dropdown?.classList.toggle("hidden");
-                icon?.classList.toggle("rotate-180");
-            };
-
-            /* =========================
-               ATTACH CHECKBOX LISTENERS (produk)
-               ========================= */
-            ["tripod", "lampu", "matras", "kompor"].forEach(p => {
-                const ch = document.getElementById(`check-${p}`);
-                if (ch) ch.addEventListener("change", () => toggleProduct(p));
-            });
-
-            /* =========================
-               INIT
-               ========================= */
-            generatePaketCards();
-            showDetail(selectedPaket);
-            updateSummary();
         });
+        // End date picker
+        endPicker = new Litepicker({
+            element: endInput,
+            format: 'DD MMMM YYYY',
+            setup: (picker) => {
+                picker.on('render', e => {
+                    disableNonWeekend(e);
+        
+                    const startData = startPicker ? startPicker.getDate() : null;
+                    if (startData && startData.dateInstance) {
+                        const start = startData.dateInstance;
+                        e.querySelectorAll('.day-item').forEach(el => {
+                            const t = el.dataset.time;
+                            if (t) {
+                                const d = new Date(parseInt(t));
+                                if ((d - start) / (1000 * 60 * 60 * 24) > 2 || d < start) {
+                                    el.classList.add('is-locked');
+                                    el.style.pointerEvents = "none";
+                                    el.style.opacity = "0.3";
+                                }
+                            }
+                        });
+                    }
+                });
+        
+                picker.on('selected', date => {
+                    if (!date || !date.dateInstance) return;
+        
+                    const startData = startPicker ? startPicker.getDate() : null;
+                    if (!startData || !startData.dateInstance) return;
+        
+                    const start = startData.dateInstance;
+                    const end = date.dateInstance;
+        
+                    // Update trip duration
+                    updateTripDuration(start, end);
+        
+                    // Update summary text
+                    if (start.getTime() === end.getTime()) {
+                        summaryEl.innerText = `Booking 1 hari: ${start.toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long' })}`;
+                    } else {
+                        summaryEl.innerText = `Booking dari ${start.toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long' })} sampai ${end.toLocaleDateString('id-ID', { weekday: 'long', day: 'numeric', month: 'long' })} (${tripDuration} hari)`;
+                    }
+        
+                    updateSummary();
+                });
+            }
+        });
+        // ==================== EVENT LISTENERS ====================
+        // Member count buttons - TAMBAHKAN INI
+        increaseBtn.addEventListener("click", () => {
+            if (memberCount < maxMembers) {
+                memberCount++;
+                updateMemberSummary();
+            }
+        });
+        
+        decreaseBtn.addEventListener("click", () => {
+            if (memberCount > 1) {
+                memberCount--;
+                updateMemberSummary();
+            }
+        });
+        
+        // Product checkboxes
+        ['tripod', 'lampu', 'matras', 'kompor', 'porter', 'guide'].forEach(product => {
+            const checkbox = document.getElementById(`check-${product}`);
+            if (checkbox) {
+                checkbox.addEventListener('change', () => toggleProduct(product));
+            }
+        
+            // Quantity buttons
+            const increaseBtnProduct = document.getElementById(`increase-${product}`);
+            const decreaseBtnProduct = document.getElementById(`decrease-${product}`);
+            
+            if (increaseBtnProduct) {
+                increaseBtnProduct.addEventListener('click', () => changeQty(product, 1));
+            }
+            if (decreaseBtnProduct) {
+                decreaseBtnProduct.addEventListener('click', () => changeQty(product, -1));
+            }
+        });
+
+        // ==================== INITIALIZATION ====================
+        updateMemberSummary();
+        updateSummary(); // Initialize summary with base trip cost
+
+        // ==================== SWIPER INITIALIZATION ====================
+        new Swiper(".mySwiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+
     </script>
 
-</x-guest-layout>
+</body>
+</html>

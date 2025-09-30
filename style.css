@@ -1,0 +1,112 @@
+@layer base {
+    html {
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+/* Chevron arrow */
+.chevron {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Dropdown dasar */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: var(--color-primary);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background: #f3f4f6;
+}
+
+/* Hover state */
+.dropdown:hover .chevron {
+  transform: rotate(-135deg); /* panah ke atas */
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero {
+   background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url('aset/volcano-with-mist-sunset.jpg') center/cover no-repeat;
+  background-size: cover; /* biar full */
+  background-position: center; /* biar center */
+}
+
+/* Three column layout */
+.columns {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Shift entire column up, but not so much that it goes out of view */
+.column-reverse {
+	transform: translateY(calc(-100% + 100vh));
+}
+
+/* As we're about to shift content out of .columns, we need it to hide its overflow */
+.columns {
+	overflow-y: hidden;
+}
+
+/* Flip item order in reversed columns */
+.column-reverse {
+	flex-direction: column-reverse;
+}
+
+/* Set up Animation */
+@keyframes adjust-position {
+	/* Start position: shift entire column up, but not so that it goes out of view */
+	from {
+		transform: translateY(calc(-100% + 100vh));
+	}
+
+	/* End position: shift entire column down, but not so that it goes out of view */
+	to {
+		transform: translateY(calc(100% - 100vh));
+	}
+}
+
+/* Hook our animation with the timeline to our columns */
+.column-reverse {
+	animation: adjust-position linear forwards;
+	animation-timeline: scroll(root block);
+}

@@ -3,13 +3,13 @@
   <!-- Grid -->
   <div class="grid gap-12 md:grid-cols-2">
     <div class="lg:w-3/4">
-      <h2 class=" text-3xl font-bold text-secondary lg:text-4xl">
-        Collaborative tools to design better user experience
+      <h2 class="text-3xl font-bold text-secondary lg:text-4xl">
+        Discover Nature, Embrace the Adventure
       </h2>
       <p class="text-gray-800 dark:text-neutral-500 mt-3">
-        We help businesses bring ideas to life in the digital world, by
-        designing and implementing the technology tools that they need to
-        win.
+        We connect adventurers with the beauty of nature by guiding them
+        through unforgettable mountain trails, breathtaking landscapes, and
+        authentic outdoor experiences.
       </p>
     </div>
     <!-- End Col -->
@@ -33,18 +33,16 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+            <path d="M2 3h20L12 21 2 3z" /> <!-- Gunung -->
           </svg>
         </span>
         <div class="grow">
           <h3 class="text-gray-800 text-base font-semibold text-secondary sm:text-lg">
-            Industry-leading documentation
+            Guided Mountain Trails
           </h3>
           <p class="text-gray-600 dark:text-neutral-500 mt-1">
-            Our documentation and extensive Client libraries contain
-            everything a business needs to build a custom integration in a
-            fraction of the time.
+            Explore scenic trekking routes with professional guides who
+            ensure safety while sharing stories of local culture and legends.
           </p>
         </div>
       </div>
@@ -68,17 +66,17 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
-            <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+            <circle cx="12" cy="12" r="10" /> <!-- Kompas -->
+            <path d="m16 8-4 9-4-4 9-4z" />
           </svg>
         </span>
         <div class="grow">
           <h3 class="text-gray-800 text-base font-semibold text-secondary sm:text-lg">
-            Developer community support
+            Adventure & Exploration
           </h3>
           <p class="text-gray-600 dark:text-neutral-500 mt-1">
-            We actively contribute to open-source projects—giving back to
-            the community through development, patches, and sponsorships.
+            From sunrise at the summit to starry nights by the campfire, we
+            bring you closer to the raw beauty of the great outdoors.
           </p>
         </div>
       </div>
@@ -102,19 +100,17 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           >
-            <path d="M7 10v12" />
-            <path
-              d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"
-            />
+            <path d="M5 22V10l7-6 7 6v12" /> <!-- Tenda -->
           </svg>
         </span>
         <div class="grow">
           <h3 class="text-gray-800 text-base font-semibold text-secondary sm:text-lg">
-            Simple and affordable
+            Outdoor Experience
           </h3>
           <p class="text-gray-600 dark:text-neutral-500 mt-1">
-            From boarding passes to movie tickets, there's pretty much
-            nothing you can't store with Preline.
+            Camp under the stars, breathe the mountain air, and create
+            memories that last a lifetime in nature’s most stunning
+            playgrounds.
           </p>
         </div>
       </div>

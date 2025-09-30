@@ -14,42 +14,42 @@
           >
             <div class="flex max-w-7xl flex-col items-start px-4 sm:px-6 lg:px-24">
               <!-- Announcement Banner -->
-              <div class="flex justify-center">
-                <a
-                  class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"
-                  href="#"
-                >
-                  OPEN TRIP
-                  <span
-                    class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      />
-                    </svg>
-                    3 DAYS
-                  </span>
-                </a>
-              </div>
+              <!--<div class="flex justify-center">-->
+              <!--  <a-->
+              <!--    class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    OPEN TRIP-->
+              <!--    <span-->
+              <!--      class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"-->
+              <!--    >-->
+              <!--      <svg-->
+              <!--        class="h-4 w-4"-->
+              <!--        aria-hidden="true"-->
+              <!--        xmlns="http://www.w3.org/2000/svg"-->
+              <!--        width="24"-->
+              <!--        height="24"-->
+              <!--        fill="none"-->
+              <!--        viewBox="0 0 24 24"-->
+              <!--      >-->
+              <!--        <path-->
+              <!--          stroke="currentColor"-->
+              <!--          stroke-linecap="round"-->
+              <!--          stroke-linejoin="round"-->
+              <!--          stroke-width="2"-->
+              <!--          d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"-->
+              <!--        />-->
+              <!--      </svg>-->
+              <!--      3 DAYS-->
+              <!--    </span>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Announcement Banner -->
 
               <!-- Title -->
               <div class="mt-8 max-w-2xl text-start">
                 <h1 class="block text-6xl font-bold text-primary md:text-7xl lg:text-8xl">
-                  Malang Mountains
+                  Arbana Outdoor
                 </h1>
               </div>
               <!-- End Title -->
@@ -61,31 +61,31 @@
               </div>
 
               <!-- Buttons -->
-              <div class="mt-12 flex justify-center gap-3">
-                <a
-                  class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"
-                  href="#"
-                >
-                  See Details
-                  <svg
-                    class="h-6 w-6 text-secondary"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                </a>
-              </div>
+              <!--<div class="mt-12 flex justify-center gap-3">-->
+              <!--  <a-->
+              <!--    class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    See Details-->
+              <!--    <svg-->
+              <!--      class="h-6 w-6 text-secondary"-->
+              <!--      aria-hidden="true"-->
+              <!--      xmlns="http://www.w3.org/2000/svg"-->
+              <!--      width="24"-->
+              <!--      height="24"-->
+              <!--      fill="none"-->
+              <!--      viewBox="0 0 24 24"-->
+              <!--    >-->
+              <!--      <path-->
+              <!--        stroke="currentColor"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--        stroke-width="2"-->
+              <!--        d="M19 12H5m14 0-4 4m4-4-4-4"-->
+              <!--      />-->
+              <!--    </svg>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Buttons -->
             </div>
           </div>
@@ -96,82 +96,83 @@
         <div class="absolute left-1/2 top-1/2 block h-screen w-full -translate-x-1/2 -translate-y-1/2">
           <div
             class="-z-1 flex h-full items-center bg-cover bg-top bg-no-repeat"
-            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/Kelut.jpg') }}');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/kook1.jpg') }}');"
           >
             <div class="flex max-w-7xl flex-col items-start px-4 sm:px-6 lg:px-24">
               <!-- Announcement Banner -->
-              <div class="flex justify-center">
-                <a
-                  class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"
-                  href="#"
-                >
-                  OPEN TRIP
-                  <span
-                    class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      />
-                    </svg>
-                    3 DAYS
-                  </span>
-                </a>
-              </div>
+              <!--<div class="flex justify-center">-->
+              <!--  <a-->
+              <!--    class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    OPEN TRIP-->
+              <!--    <span-->
+              <!--      class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"-->
+              <!--    >-->
+              <!--      <svg-->
+              <!--        class="h-4 w-4"-->
+              <!--        aria-hidden="true"-->
+              <!--        xmlns="http://www.w3.org/2000/svg"-->
+              <!--        width="24"-->
+              <!--        height="24"-->
+              <!--        fill="none"-->
+              <!--        viewBox="0 0 24 24"-->
+              <!--      >-->
+              <!--        <path-->
+              <!--          stroke="currentColor"-->
+              <!--          stroke-linecap="round"-->
+              <!--          stroke-linejoin="round"-->
+              <!--          stroke-width="2"-->
+              <!--          d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"-->
+              <!--        />-->
+              <!--      </svg>-->
+              <!--      3 DAYS-->
+              <!--    </span>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Announcement Banner -->
 
               <!-- Title -->
               <div class="mt-8 max-w-2xl text-start">
                 <h1 class="block text-6xl font-bold text-primary md:text-7xl lg:text-8xl">
-                  Malang Mountains
+                  Sunrise Adventure
                 </h1>
+                
               </div>
               <!-- End Title -->
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                 Experience the charm of four majestic mountains in Malang Raya
+                  Witness the golden sunrise over the misty highlands of East Java
                 </p>
               </div>
 
               <!-- Buttons -->
-              <div class="mt-12 flex justify-center gap-3">
-                <a
-                  class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"
-                  href="#"
-                >
-                  See Details
-                  <svg
-                    class="h-6 w-6 text-secondary"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                </a>
-              </div>
+              <!--<div class="mt-12 flex justify-center gap-3">-->
+              <!--  <a-->
+              <!--    class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    See Details-->
+              <!--    <svg-->
+              <!--      class="h-6 w-6 text-secondary"-->
+              <!--      aria-hidden="true"-->
+              <!--      xmlns="http://www.w3.org/2000/svg"-->
+              <!--      width="24"-->
+              <!--      height="24"-->
+              <!--      fill="none"-->
+              <!--      viewBox="0 0 24 24"-->
+              <!--    >-->
+              <!--      <path-->
+              <!--        stroke="currentColor"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--        stroke-width="2"-->
+              <!--        d="M19 12H5m14 0-4 4m4-4-4-4"-->
+              <!--      />-->
+              <!--    </svg>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Buttons -->
             </div>
           </div>
@@ -182,82 +183,83 @@
         <div class="absolute left-1/2 top-1/2 block h-screen w-full -translate-x-1/2 -translate-y-1/2">
           <div
             class="-z-1 flex h-full items-center bg-cover bg-top bg-no-repeat"
-            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/argopuro.webp') }}');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/kook2.jpg') }}');"
           >
             <div class="flex max-w-7xl flex-col items-start px-4 sm:px-6 lg:px-24">
               <!-- Announcement Banner -->
-              <div class="flex justify-center">
-                <a
-                  class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"
-                  href="#"
-                >
-                  OPEN TRIP
-                  <span
-                    class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      />
-                    </svg>
-                    3 DAYS
-                  </span>
-                </a>
-              </div>
+              <!--<div class="flex justify-center">-->
+              <!--  <a-->
+              <!--    class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    OPEN TRIP-->
+              <!--    <span-->
+              <!--      class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"-->
+              <!--    >-->
+              <!--      <svg-->
+              <!--        class="h-4 w-4"-->
+              <!--        aria-hidden="true"-->
+              <!--        xmlns="http://www.w3.org/2000/svg"-->
+              <!--        width="24"-->
+              <!--        height="24"-->
+              <!--        fill="none"-->
+              <!--        viewBox="0 0 24 24"-->
+              <!--      >-->
+              <!--        <path-->
+              <!--          stroke="currentColor"-->
+              <!--          stroke-linecap="round"-->
+              <!--          stroke-linejoin="round"-->
+              <!--          stroke-width="2"-->
+              <!--          d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"-->
+              <!--        />-->
+              <!--      </svg>-->
+              <!--      3 DAYS-->
+              <!--    </span>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Announcement Banner -->
 
               <!-- Title -->
               <div class="mt-8 max-w-2xl text-start">
                 <h1 class="block text-6xl font-bold text-primary md:text-7xl lg:text-8xl">
-                  Malang Mountains
+                  Explore Nature
                 </h1>
+                
               </div>
               <!-- End Title -->
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Nikmati pesona empat gunung megah di Malang Raya
+                  Discover hidden trails, lush forests, and breathtaking landscapes
                 </p>
               </div>
 
               <!-- Buttons -->
-              <div class="mt-12 flex justify-center gap-3">
-                <a
-                  class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"
-                  href="#"
-                >
-                  See Details
-                  <svg
-                    class="h-6 w-6 text-secondary"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                </a>
-              </div>
+              <!--<div class="mt-12 flex justify-center gap-3">-->
+              <!--  <a-->
+              <!--    class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    See Details-->
+              <!--    <svg-->
+              <!--      class="h-6 w-6 text-secondary"-->
+              <!--      aria-hidden="true"-->
+              <!--      xmlns="http://www.w3.org/2000/svg"-->
+              <!--      width="24"-->
+              <!--      height="24"-->
+              <!--      fill="none"-->
+              <!--      viewBox="0 0 24 24"-->
+              <!--    >-->
+              <!--      <path-->
+              <!--        stroke="currentColor"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--        stroke-width="2"-->
+              <!--        d="M19 12H5m14 0-4 4m4-4-4-4"-->
+              <!--      />-->
+              <!--    </svg>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Buttons -->
             </div>
           </div>
@@ -268,82 +270,82 @@
         <div class="absolute left-1/2 top-1/2 block h-screen w-full -translate-x-1/2 -translate-y-1/2">
           <div
             class="-z-1 flex h-full items-center bg-cover bg-top bg-no-repeat"
-            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/butak.jpg') }}');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/kook8.jpg') }}');"
           >
             <div class="flex max-w-7xl flex-col items-start px-4 sm:px-6 lg:px-24">
               <!-- Announcement Banner -->
-              <div class="flex justify-center">
-                <a
-                  class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"
-                  href="#"
-                >
-                  OPEN TRIP
-                  <span
-                    class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      />
-                    </svg>
-                    3 DAYS
-                  </span>
-                </a>
-              </div>
+              <!--<div class="flex justify-center">-->
+              <!--  <a-->
+              <!--    class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    OPEN TRIP-->
+              <!--    <span-->
+              <!--      class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"-->
+              <!--    >-->
+              <!--      <svg-->
+              <!--        class="h-4 w-4"-->
+              <!--        aria-hidden="true"-->
+              <!--        xmlns="http://www.w3.org/2000/svg"-->
+              <!--        width="24"-->
+              <!--        height="24"-->
+              <!--        fill="none"-->
+              <!--        viewBox="0 0 24 24"-->
+              <!--      >-->
+              <!--        <path-->
+              <!--          stroke="currentColor"-->
+              <!--          stroke-linecap="round"-->
+              <!--          stroke-linejoin="round"-->
+              <!--          stroke-width="2"-->
+              <!--          d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"-->
+              <!--        />-->
+              <!--      </svg>-->
+              <!--      3 DAYS-->
+              <!--    </span>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Announcement Banner -->
 
               <!-- Title -->
               <div class="mt-8 max-w-2xl text-start">
                 <h1 class="block text-6xl font-bold text-primary md:text-7xl lg:text-8xl">
-                  Malang Mountains
+                  Unforgettable Moments
                 </h1>
               </div>
               <!-- End Title -->
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Experience the charm of four majestic mountains in Malang Raya
+                  Create memories that last a lifetime with your travel companions
                 </p>
               </div>
 
               <!-- Buttons -->
-              <div class="mt-12 flex justify-center gap-3">
-                <a
-                  class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"
-                  href="#"
-                >
-                  See Details
-                  <svg
-                    class="h-6 w-6 text-secondary"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                </a>
-              </div>
+              <!--<div class="mt-12 flex justify-center gap-3">-->
+              <!--  <a-->
+              <!--    class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    See Details-->
+              <!--    <svg-->
+              <!--      class="h-6 w-6 text-secondary"-->
+              <!--      aria-hidden="true"-->
+              <!--      xmlns="http://www.w3.org/2000/svg"-->
+              <!--      width="24"-->
+              <!--      height="24"-->
+              <!--      fill="none"-->
+              <!--      viewBox="0 0 24 24"-->
+              <!--    >-->
+              <!--      <path-->
+              <!--        stroke="currentColor"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--        stroke-width="2"-->
+              <!--        d="M19 12H5m14 0-4 4m4-4-4-4"-->
+              <!--      />-->
+              <!--    </svg>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Buttons -->
             </div>
           </div>
@@ -354,82 +356,83 @@
         <div class="absolute left-1/2 top-1/2 block h-screen w-full -translate-x-1/2 -translate-y-1/2">
           <div
             class="-z-1 flex h-full items-center bg-cover bg-top bg-no-repeat"
-            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/lawu.webp') }}');"
+            style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url('storage/images/kook4.jpg') }}');"
           >
             <div class="flex max-w-7xl flex-col items-start px-4 sm:px-6 lg:px-24">
               <!-- Announcement Banner -->
-              <div class="flex justify-center">
-                <a
-                  class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"
-                  href="#"
-                >
-                  OPEN TRIP
-                  <span
-                    class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"
-                  >
-                    <svg
-                      class="h-4 w-4"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                      />
-                    </svg>
-                    3 DAYS
-                  </span>
-                </a>
-              </div>
+              <!--<div class="flex justify-center">-->
+              <!--  <a-->
+              <!--    class="bg-white/30 border-white/20 inline-flex w-fit items-center justify-center gap-x-1.5 rounded-full border px-2 py-1 font-bold text-primary shadow-md backdrop-blur-md"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    OPEN TRIP-->
+              <!--    <span-->
+              <!--      class="inline-flex items-end justify-center gap-x-2 rounded-full bg-secondary px-2.5 py-1.5 text-sm font-bold leading-none text-primary"-->
+              <!--    >-->
+              <!--      <svg-->
+              <!--        class="h-4 w-4"-->
+              <!--        aria-hidden="true"-->
+              <!--        xmlns="http://www.w3.org/2000/svg"-->
+              <!--        width="24"-->
+              <!--        height="24"-->
+              <!--        fill="none"-->
+              <!--        viewBox="0 0 24 24"-->
+              <!--      >-->
+              <!--        <path-->
+              <!--          stroke="currentColor"-->
+              <!--          stroke-linecap="round"-->
+              <!--          stroke-linejoin="round"-->
+              <!--          stroke-width="2"-->
+              <!--          d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"-->
+              <!--        />-->
+              <!--      </svg>-->
+              <!--      3 DAYS-->
+              <!--    </span>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Announcement Banner -->
 
               <!-- Title -->
               <div class="mt-8 max-w-2xl text-start">
                 <h1 class="block text-6xl font-bold text-primary md:text-7xl lg:text-8xl">
-                  Malang Mountains
+                  Cultural Journey
                 </h1>
+
               </div>
               <!-- End Title -->
 
               <div class="max-w-3xl text-start">
                 <p class="text-xl text-primary">
-                  Experience the charm of four majestic mountains in Malang Raya
+                  Connect with local traditions and experience authentic hospitality
                 </p>
               </div>
 
               <!-- Buttons -->
-              <div class="mt-12 flex justify-center gap-3">
-                <a
-                  class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"
-                  href="#"
-                >
-                  See Details
-                  <svg
-                    class="h-6 w-6 text-secondary"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 12H5m14 0-4 4m4-4-4-4"
-                    />
-                  </svg>
-                </a>
-              </div>
+              <!--<div class="mt-12 flex justify-center gap-3">-->
+              <!--  <a-->
+              <!--    class="border-transparent text-md focus:outline-hidden inline-flex items-center justify-center gap-x-3 rounded-full border bg-primary px-4 py-2 text-center font-medium text-secondary"-->
+              <!--    href="#"-->
+              <!--  >-->
+              <!--    See Details-->
+              <!--    <svg-->
+              <!--      class="h-6 w-6 text-secondary"-->
+              <!--      aria-hidden="true"-->
+              <!--      xmlns="http://www.w3.org/2000/svg"-->
+              <!--      width="24"-->
+              <!--      height="24"-->
+              <!--      fill="none"-->
+              <!--      viewBox="0 0 24 24"-->
+              <!--    >-->
+              <!--      <path-->
+              <!--        stroke="currentColor"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--        stroke-width="2"-->
+              <!--        d="M19 12H5m14 0-4 4m4-4-4-4"-->
+              <!--      />-->
+              <!--    </svg>-->
+              <!--  </a>-->
+              <!--</div>-->
               <!-- End Buttons -->
             </div>
           </div>
