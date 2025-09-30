@@ -44,6 +44,9 @@ Route::get('/gallery', function () {
 Route::get('/news', function () {
     return view('news');
 });
+Route::get('/detail-news', function () {
+    return view('detail-news');
+});
 
 Route::middleware([
     'auth:sanctum',
