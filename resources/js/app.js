@@ -161,3 +161,4 @@ gsap.from(".footer-logo, .footer-links, .footer-servis", {
         start: "top 80%",
     },
 });
+

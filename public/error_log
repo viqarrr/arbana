@@ -1,0 +1,12 @@
+[26-Sep-2025 21:19:52 Asia/Jakarta] PHP Warning:  require(/home/arbc9392/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/arbc9392/public_html/index.php on line 34
+[26-Sep-2025 21:19:52 Asia/Jakarta] PHP Warning:  require(/home/arbc9392/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/arbc9392/public_html/index.php on line 34
+[26-Sep-2025 21:19:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/arbc9392/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/arbc9392/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/arbc9392/public_html/index.php on line 34
+[26-Sep-2025 21:19:55 Asia/Jakarta] PHP Warning:  require(/home/arbc9392/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/arbc9392/public_html/index.php on line 34
+[26-Sep-2025 21:19:55 Asia/Jakarta] PHP Warning:  require(/home/arbc9392/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/arbc9392/public_html/index.php on line 34
+[26-Sep-2025 21:19:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Failed opening required '/home/arbc9392/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/arbc9392/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/arbc9392/public_html/index.php on line 34

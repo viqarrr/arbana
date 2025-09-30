@@ -12,7 +12,15 @@
 @theme {
     --color-primary: #f7f0d6;
     --color-secondary: #282829;
+    --color-accent: #fbbf24;
     --font-display: "Poppins", sans-serif;
+}
+
+@layer base {
+    :root {
+        --swiper-navigation-color: var(--color-accent);
+        --swiper-pagination-color: var(--color-accent);
+    }
 }
 
 [x-cloak] {
@@ -20,5 +28,7 @@
 }
 
 [data-carousel-item] {
-  transform: none !important;
+    transform: none !important;
 }
+
+

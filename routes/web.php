@@ -29,6 +29,10 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/trips', function () {
+    return view('trips');
+});
+
 Route::get('/products', function () {
     return view('products');
 });
@@ -43,6 +47,10 @@ Route::get('/services', function () {
 
 Route::get('/gallery', function () {
     return view('gallery');
+});
+
+Route::get('/news', function () {
+    return view('news');
 });
 
 Route::get('/trips', [PublicTripController::class, 'index'])->name('trips.index');
