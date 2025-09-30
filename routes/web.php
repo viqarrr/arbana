@@ -52,6 +52,9 @@ Route::get('/gallery', function () {
 Route::get('/news', function () {
     return view('news');
 });
+Route::get('/detail-news', function () {
+    return view('detail-news');
+});
 
 Route::get('/trips', [PublicTripController::class, 'index'])->name('trips.index');
 Route::get('/trips/{trip:slug}', [PublicTripController::class, 'show'])->name('trips.show');
