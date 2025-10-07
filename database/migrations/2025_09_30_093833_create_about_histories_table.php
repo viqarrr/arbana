@@ -11,22 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('mountains', function (Blueprint $table) {
+        Schema::create('about_histories', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('region');
-            $table->integer('mdpl');
-            $table->text('meeting_point');
-            $table->longText('description');
+            $table->string('heading');
+            $table->text('paragraph');
+            $table->text('image');
             $table->timestamps();
         });
     }
-    
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('mountains');
+        Schema::dropIfExists('about_histories');
     }
 };

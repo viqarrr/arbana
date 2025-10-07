@@ -19,7 +19,7 @@ return new class extends Migration
             $table->float('price_one_day', 8, 2);
             $table->float('price_two_days', 8, 2);
             $table->float('price_extra_per_day', 8, 2);
-            $table->string('image_path')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

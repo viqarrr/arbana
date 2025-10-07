@@ -13,13 +13,8 @@ class EquipmentController extends Controller
 {
     public function index(): View
     {
-        $equipment = Equipment::paginate(10);
-        return view('admin.equipment.index', compact('equipment'));
-    }
-
-    public function create(): View
-    {
-        return view('admin.equipment.create');
+        $products = Equipment::paginate(10);
+        return view('admin.products.index', compact('products'));
     }
 
     public function store(EquipmentRequest $request): RedirectResponse
@@ -27,51 +22,41 @@ class EquipmentController extends Controller
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
-            $data['image_path'] = $request->file('image')->store('equipment', 'public');
+            $data['image'] = $request->file('image')->store('equipment', 'public');
         }
 
         Equipment::create($data);
 
-        return redirect()->route('admin.equipment.index')
-            ->with('success', 'Equipment created successfully.');
+        return redirect()->route('admin.products.index')
+            ->with('success', 'Produk berhasil ditambahkan.');
     }
 
-    public function show(Equipment $equipment): View
-    {
-        return view('admin.equipment.show', compact('equipment'));
-    }
-
-    public function edit(Equipment $equipment): View
-    {
-        return view('admin.equipment.edit', compact('equipment'));
-    }
-
-    public function update(EquipmentRequest $request, Equipment $equipment): RedirectResponse
+    public function update(EquipmentRequest $request, Equipment $product): RedirectResponse
     {
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
-            if ($equipment->image_path) {
-                Storage::disk('public')->delete($equipment->image_path);
+            if ($product->image) {
+                Storage::disk('public')->delete($product->image);
             }
-            $data['image_path'] = $request->file('image')->store('equipment', 'public');
+            $data['image'] = $request->file('image')->store('equipment', 'public');
         }
 
-        $equipment->update($data);
+        $product->update($data);
 
-        return redirect()->route('admin.equipment.index')
+        return redirect()->route('admin.products.index')
             ->with('success', 'Equipment updated successfully.');
     }
 
-    public function destroy(Equipment $equipment): RedirectResponse
+    public function destroy(Equipment $product): RedirectResponse
     {
-        if ($equipment->image_path) {
-            Storage::disk('public')->delete($equipment->image_path);
+        if ($product->image) {
+            Storage::disk('public')->delete($product->image);
         }
 
-        $equipment->delete();
+        $product->delete();
 
-        return redirect()->route('admin.equipment.index')
-            ->with('success', 'Equipment deleted successfully.');
+        return redirect()->route('admin.products.index')
+            ->with('success', 'Produk berhasil dihapus.');
     }
 }
