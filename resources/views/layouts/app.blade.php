@@ -1,44 +1,98 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <meta
+    name="csrf-token"
+    content="{{ csrf_token() }}"
+  >
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+  <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <!-- Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.bunny.net"
+  >
+  <link
+    href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap"
+    rel="stylesheet"
+  />
 
-        <!-- Styles -->
-        @livewireStyles
-    </head>
-    <body class="font-sans antialiased">
-        <x-banner />
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+  <!-- Scripts -->
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+  <!-- Styles -->
+  @livewireStyles
+</head>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+<body class="font-sans antialiased">
+  <x-banner />
+  <div class="bg-gray-100 min-h-screen">
+    <x-app.header></x-app.header>
+    <!-- Page Content -->
+    <main
+      x-data="{ open: true }"
+      class="pt-13 px-3 pb-3 transition-all duration-300 lg:fixed lg:inset-0 lg:ps-60"
+    >
+      <x-app.sidebar></x-app.sidebar>
+      <div
+        class="bg-white border-gray-200 shadow-xs flex h-[calc(100dvh-62px)] flex-col overflow-hidden rounded-lg border lg:h-full"
+      >
+        <div class="bg-white border-gray-200 flex flex-wrap items-center justify-between gap-2 border-b px-4 py-3">
+          @if (isset($header))
+            <div class="flex items-center gap-2">
+              <button
+                @click.stop="open = !open"
+                type="button"
+                class="border-gray-200 text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 flex size-8 items-center justify-center gap-x-2 rounded-lg border disabled:pointer-events-none disabled:opacity-50 lg:hidden"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="sr-only">Toggle Navigation</span>
+                <svg
+                  class="size-4 shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect
+                    width="18"
+                    height="18"
+                    x="3"
+                    y="3"
+                    rx="2"
+                  />
+                  <path d="M15 3v18" />
+                  <path d="m8 9 3 3-3 3" />
+                </svg>
+              </button>
+              <h2 class="text-gray-800 text-lg font-medium leading-tight">
+                {{ $header }}
+              </h2>
+            </div>
+          @endif
+          {{ $slot }}
         </div>
+      </div>
+    </main>
+  </div>
 
-        @stack('modals')
+  @stack('modals')
 
-        @livewireScripts
-    </body>
+  @livewireScripts
+</body>
+
 </html>

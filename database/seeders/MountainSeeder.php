@@ -1,0 +1,59 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Mountain;
+use App\Models\MountainImage;
+use Illuminate\Database\Seeder;
+
+class MountainSeeder extends Seeder
+{
+    public function run(): void
+    {
+        $mountains = [
+            // Gunung besar
+            ['name' => 'Gn. Kawi',          'region' => 'East Java', 'mdpl' => 2551, 'meeting_point' => 'Malang'],
+            ['name' => 'Gn. Ijen',          'region' => 'East Java', 'mdpl' => 2799, 'meeting_point' => 'Bondowoso'],
+            ['name' => 'Gn. Butak',         'region' => 'East Java', 'mdpl' => 2868, 'meeting_point' => 'Batu'],
+            ['name' => 'Gn. Argopuro',      'region' => 'East Java', 'mdpl' => 3008, 'meeting_point' => 'Probolinggo'],
+            ['name' => 'Gn. Lawu',          'region' => 'East Java', 'mdpl' => 3265, 'meeting_point' => 'Tawangmangu'],
+            ['name' => 'Gn. Raung',         'region' => 'East Java', 'mdpl' => 3332, 'meeting_point' => 'Bondowoso'],
+            ['name' => 'Gn. Arjuno',        'region' => 'East Java', 'mdpl' => 3339, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Gn. Semeru',        'region' => 'East Java', 'mdpl' => 3676, 'meeting_point' => 'Lumajang'],
+
+            // Anak Gunung / Puthuk
+            ['name' => 'Puthuk Semar',      'region' => 'East Java', 'mdpl' => 933,  'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Rengganis',     'region' => 'East Java', 'mdpl' => 1100, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Janda',         'region' => 'East Java', 'mdpl' => 1100, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Lorokan',       'region' => 'East Java', 'mdpl' => 1100, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Puthuk Watu Jenger','region' => 'East Java', 'mdpl' => 1100, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Puthuk Cendono',    'region' => 'East Java', 'mdpl' => 1131, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Sarah Klopo',   'region' => 'East Java', 'mdpl' => 1234, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Bekel',         'region' => 'East Java', 'mdpl' => 1250, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Puthuk Kentongan',  'region' => 'East Java', 'mdpl' => 1305, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Puthuk Watu',       'region' => 'East Java', 'mdpl' => 1305, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Puthuk Budug Asu',  'region' => 'East Java', 'mdpl' => 1422, 'meeting_point' => 'Lawang'],
+            ['name' => 'Puthuk Siwur',      'region' => 'East Java', 'mdpl' => 1429, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Tanggung',      'region' => 'East Java', 'mdpl' => 1458, 'meeting_point' => 'Pasuruan'],
+            ['name' => 'Mt. Jabal',         'region' => 'East Java', 'mdpl' => 1470, 'meeting_point' => 'Malang'],
+            ['name' => 'Puthuk Gragal',     'region' => 'East Java', 'mdpl' => 1480, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Pundak',        'region' => 'East Java', 'mdpl' => 1585, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Lincing',       'region' => 'East Java', 'mdpl' => 1860, 'meeting_point' => 'Lawang'],
+        ];
+
+        foreach ($mountains as $mountainData) {
+            $mountain = Mountain::create([
+                ...$mountainData,
+                'description' => $mountainData['name'] . ' is one of the notable mountains in East Java.'
+            ]);
+
+            // Create 3 sample images per mountain
+            for ($i = 1; $i <= 3; $i++) {
+                MountainImage::create([
+                    'mountain_id' => $mountain->id,
+                    'image_path' => 'mountains/sample-' . strtolower(str_replace([' ', '.'], '-', $mountain->name)) . '-' . $i . '.jpg'
+                ]);
+            }
+        }
+    }
+}
