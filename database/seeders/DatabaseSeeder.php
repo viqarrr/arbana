@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Destination;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,12 +20,19 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+        
+        \App\Models\DestinationCategory::create([
+            'name' => 'Open Trip',
+            'slug' => 'open-trip'
+        ]);
 
         $this->call([
-            MountainSeeder::class,
+            DestinationSeeder::class,
             TripSeeder::class,
             EquipmentSeeder::class,
             ServiceSeeder::class,
+            BookingSeeder::class,
+            RentalBookingSeeder::class,
         ]);
     }
 }

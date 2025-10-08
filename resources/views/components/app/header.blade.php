@@ -1,5 +1,5 @@
 <header
-  class="z-48 lg:z-61 bg-zinc-100 fixed inset-x-0 top-0 flex w-full flex-wrap py-2.5 text-sm md:flex-nowrap md:justify-start"
+  class="z-51 bg-zinc-100 fixed inset-x-0 top-0 flex w-full flex-wrap py-2.5 text-sm md:flex-nowrap md:justify-start"
 >
   <nav class="sm:px-5.5 mx-auto flex w-full basis-full items-center px-4">
     <div class="flex w-full items-center gap-x-1.5">
@@ -58,8 +58,8 @@
                 aria-label="Dropdown"
               > <img
                   class="size-7 shrink-0 rounded-full"
-                  src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
-                  alt="Avatar"
+                  src="{{ Auth::user()->profile_photo_url }}"
+                  alt="{{ Auth::user()->name }}"
                 > </button>
               <div
                 x-show="isOpen"
@@ -74,12 +74,12 @@
                 role="menu"
                 aria-orientation="vertical"
               >
-                <div class="px-3.5 py-2"> <span class="text-gray-800 font-medium"> James Collison </span>
-                  <p class="text-gray-500 text-sm"> jamescollison@site.com </p>
+                <div class="px-3.5 py-2"> <span class="text-gray-800 font-medium">{{ Auth::user()->name }}</span>
+                  <p class="text-gray-500 text-sm"> {{ Auth::user()->email }} </p>
                 </div>
                 <div class="border-gray-200 border-t p-1"> <a
                     class="text-gray-600 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm disabled:pointer-events-none disabled:opacity-50"
-                    href="/profile"
+                    href="{{ route('profile.show') }}"
                   > <svg
                       class="mt-0.5 size-4 shrink-0"
                       xmlns="http://www.w3.org/2000/svg"
@@ -121,25 +121,34 @@
                         cy="12"
                         r="3"
                       />
-                    </svg> Settings </a> <a
-                    class="text-gray-600 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm disabled:pointer-events-none disabled:opacity-50"
-                    href="#"
-                  > <svg
-                      class="mt-0.5 size-4 shrink-0"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="m16 17 5-5-5-5" />
-                      <path d="M21 12H9" />
-                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                    </svg> Log out </a> </div>
+                    </svg> Settings </a>
+                  <form
+                    method="POST"
+                    action="{{ route('logout') }}"
+                    x-data
+                  >
+                    @csrf
+                    <button
+                      class="text-gray-600 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 flex items-center gap-x-3 rounded-lg px-3 py-2 text-sm disabled:pointer-events-none disabled:opacity-50"
+                    > <svg
+                        class="mt-0.5 size-4 shrink-0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="m16 17 5-5-5-5" />
+                        <path d="M21 12H9" />
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                      </svg> Log out
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

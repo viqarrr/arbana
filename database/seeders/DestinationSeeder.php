@@ -2,24 +2,24 @@
 
 namespace Database\Seeders;
 
-use App\Models\Mountain;
-use App\Models\MountainImage;
+use App\Models\Destination;
+use App\Models\DestinationImage;
 use Illuminate\Database\Seeder;
 
-class MountainSeeder extends Seeder
+class DestinationSeeder extends Seeder
 {
     public function run(): void
     {
         $mountains = [
             // Gunung besar
-            ['name' => 'Gn. Kawi',          'region' => 'East Java', 'mdpl' => 2551, 'meeting_point' => 'Malang'],
-            ['name' => 'Gn. Ijen',          'region' => 'East Java', 'mdpl' => 2799, 'meeting_point' => 'Bondowoso'],
-            ['name' => 'Gn. Butak',         'region' => 'East Java', 'mdpl' => 2868, 'meeting_point' => 'Batu'],
-            ['name' => 'Gn. Argopuro',      'region' => 'East Java', 'mdpl' => 3008, 'meeting_point' => 'Probolinggo'],
-            ['name' => 'Gn. Lawu',          'region' => 'East Java', 'mdpl' => 3265, 'meeting_point' => 'Tawangmangu'],
-            ['name' => 'Gn. Raung',         'region' => 'East Java', 'mdpl' => 3332, 'meeting_point' => 'Bondowoso'],
-            ['name' => 'Gn. Arjuno',        'region' => 'East Java', 'mdpl' => 3339, 'meeting_point' => 'Mojokerto'],
-            ['name' => 'Gn. Semeru',        'region' => 'East Java', 'mdpl' => 3676, 'meeting_point' => 'Lumajang'],
+            ['name' => 'Mt. Kawi',          'region' => 'East Java', 'mdpl' => 2551, 'meeting_point' => 'Malang'],
+            ['name' => 'Mt. Ijen',          'region' => 'East Java', 'mdpl' => 2799, 'meeting_point' => 'Bondowoso'],
+            ['name' => 'Mt. Butak',         'region' => 'East Java', 'mdpl' => 2868, 'meeting_point' => 'Batu'],
+            ['name' => 'Mt. Argopuro',      'region' => 'East Java', 'mdpl' => 3008, 'meeting_point' => 'Probolinggo'],
+            ['name' => 'Mt. Lawu',          'region' => 'East Java', 'mdpl' => 3265, 'meeting_point' => 'Tawangmangu'],
+            ['name' => 'Mt. Raung',         'region' => 'East Java', 'mdpl' => 3332, 'meeting_point' => 'Bondowoso'],
+            ['name' => 'Mt. Arjuno',        'region' => 'East Java', 'mdpl' => 3339, 'meeting_point' => 'Mojokerto'],
+            ['name' => 'Mt. Semeru',        'region' => 'East Java', 'mdpl' => 3676, 'meeting_point' => 'Lumajang'],
 
             // Anak Gunung / Puthuk
             ['name' => 'Puthuk Semar',      'region' => 'East Java', 'mdpl' => 933,  'meeting_point' => 'Mojokerto'],
@@ -42,16 +42,17 @@ class MountainSeeder extends Seeder
         ];
 
         foreach ($mountains as $mountainData) {
-            $mountain = Mountain::create([
+            $destination = Destination::create([
                 ...$mountainData,
+                'destination_category_id' => '1',
                 'description' => $mountainData['name'] . ' is one of the notable mountains in East Java.'
             ]);
 
             // Create 3 sample images per mountain
             for ($i = 1; $i <= 3; $i++) {
-                MountainImage::create([
-                    'mountain_id' => $mountain->id,
-                    'image_path' => 'mountains/sample-' . strtolower(str_replace([' ', '.'], '-', $mountain->name)) . '-' . $i . '.jpg'
+                DestinationImage::create([
+                    'destination_id' => $destination->id,
+                    'image_path' => 'mountains/sample-' . strtolower(str_replace([' ', '.'], '-', $destination->name)) . '-' . $i . '.jpg'
                 ]);
             }
         }

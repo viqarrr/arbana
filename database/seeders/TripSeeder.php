@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Destination;
 use App\Models\Trip;
 use App\Models\TripPackage;
 use App\Models\Mountain;
@@ -12,13 +13,13 @@ class TripSeeder extends Seeder
 {
     public function run(): void
     {
-        $mountains = Mountain::all();
+        $mountains = Destination::all();
 
         // === SAMPLE OPEN TRIP (beberapa gunung aja) ===
         $openTripMountains = ['Mt. Semeru', 'Mt. Lawu', 'Mt. Ijen'];
         foreach ($mountains->whereIn('name', $openTripMountains) as $mountain) {
             Trip::create([
-                'mountain_id'    => $mountain->id,
+                'destination_id'    => $mountain->id,
                 'type'           => 'open_trip',
                 'title'          => $mountain->name . ' Open Trip Adventure',
                 'slug'           => Str::slug($mountain->name . ' Open Trip Adventure'),
@@ -32,27 +33,13 @@ class TripSeeder extends Seeder
             ]);
         }
 
-        // === SAMPLE CAMPGROUND (beberapa gunung aja) ===
-        $campgroundMountains = ['Mt. Butak', 'Mt. Argopuro', 'Mt. Kawi'];
-        foreach ($mountains->whereIn('name', $campgroundMountains) as $mountain) {
-            $campgroundTrip = Trip::create([
-                'mountain_id' => $mountain->id,
-                'type'        => 'campground',
-                'title'       => $mountain->name . ' Campground',
-                'slug'        => Str::slug($mountain->name . ' Campground'),
-                'duration'    => 2,
-                'capacity'    => 30,
-                'status'      => 'published',
-            ]);
 
-            $this->createPackages($campgroundTrip);
-        }
 
         // === PRIVATE TRIP & FAMILY GATHERING untuk semua gunung ===
         foreach ($mountains as $mountain) {
             // Private Trip
             $privateTrip = Trip::create([
-                'mountain_id' => $mountain->id,
+                'destination_id' => $mountain->id,
                 'type'        => 'private_trip',
                 'title'       => $mountain->name . ' Private Expedition',
                 'slug'        => Str::slug($mountain->name . ' Private Expedition'),
@@ -64,7 +51,7 @@ class TripSeeder extends Seeder
 
             // Family Gathering
             $familyTrip = Trip::create([
-                'mountain_id' => $mountain->id,
+                'destination_id' => $mountain->id,
                 'type'        => 'family_gathering',
                 'title'       => $mountain->name . ' Family Gathering',
                 'slug'        => Str::slug($mountain->name . ' Family Gathering'),

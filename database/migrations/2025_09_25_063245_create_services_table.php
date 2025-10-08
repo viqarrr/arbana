@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->enum('name', ['porter', 'guide', 'documentation']);
+            $table->string('name');
             $table->text('description');
             $table->float('price', 8, 2);
+            $table->text('image');
             $table->timestamps();
         });
     }

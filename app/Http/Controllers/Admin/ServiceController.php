@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class ServiceController extends Controller
@@ -16,32 +17,32 @@ class ServiceController extends Controller
         return view('admin.services.index', compact('services'));
     }
 
-    public function create(): View
-    {
-        return view('admin.services.create');
-    }
-
     public function store(ServiceRequest $request): RedirectResponse
     {
-        Service::create($request->validated());
+        $data = $request->validated();
+
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('services', 'public');
+        }
+
+        Service::create($data);
 
         return redirect()->route('admin.services.index')
             ->with('success', 'Service created successfully.');
     }
 
-    public function show(Service $service): View
-    {
-        return view('admin.services.show', compact('service'));
-    }
-
-    public function edit(Service $service): View
-    {
-        return view('admin.services.edit', compact('service'));
-    }
-
     public function update(ServiceRequest $request, Service $service): RedirectResponse
     {
-        $service->update($request->validated());
+        $data = $request->validated();
+
+        if ($request->hasFile('image')) {
+            if ($service->image) {
+                Storage::disk('public')->delete($service->image);
+            }
+            $data['image'] = $request->file('image')->store('equipment', 'public');
+        }
+
+        $service->update($data);
 
         return redirect()->route('admin.services.index')
             ->with('success', 'Service updated successfully.');
@@ -49,6 +50,10 @@ class ServiceController extends Controller
 
     public function destroy(Service $service): RedirectResponse
     {
+        if ($service->image) {
+            Storage::disk('public')->delete($service->image);
+        }
+
         $service->delete();
 
         return redirect()->route('admin.services.index')
