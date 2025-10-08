@@ -2,7 +2,7 @@
   <div
     @click.outside="open = false"
     :class="{ 'translate-x-0': open, '-translate-x-full': !open }"
-    class="z-60 bg-gray-100 fixed inset-y-0 start-0 h-full w-60 lg:bottom-0 lg:end-auto lg:block lg:-translate-x-0"
+    class="z-50 bg-gray-100 fixed inset-y-0 start-0 h-full w-60 lg:bottom-0 lg:end-auto lg:block lg:-translate-x-0"
     role="dialog"
     tabindex="-1"
     aria-label="Sidebar"
@@ -71,9 +71,9 @@
         </button>
       </div>
       <!-- Content -->
-      <div class="mt-8 h-full overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar]:w-0">
+      <div class="mt-8 h-full overflow-y-auto [&::-webkit-scrollbar]:w-0">
         <nav
-          class="[&::-webkit-scrollbar-track]:bg-gray-200 [&::-webkit-scrollbar-thumb]:bg-gray-300 flex size-full flex-col overflow-y-auto p-3 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar]:w-2"
+          class="flex size-full flex-col overflow-y-auto p-3 [&::-webkit-scrollbar]:w-2"
         >
           <div class="border-gray-200 mt-3 flex flex-col pt-3 first:mt-0 first:pt-0"> <span
               class="text-gray-800 mb-2 block ps-2.5 text-xs font-medium uppercase"
@@ -158,7 +158,7 @@
                 >
                   <li> <a
                       class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
-                      href="/admin/info"
+                      href="/admin/description"
                     > Deskripsi </a> </li>
                   <li> <a
                       class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
@@ -183,16 +183,8 @@
                 > Destinasi </a> </li>
               <li> <a
                   class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
-                  href="/admin/trips?type=open-trip"
-                  > Open Trip </a> </li>
-                  <li> <a
-                  class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
-                  href="/admin/trips?type=private-trip"
-                > Private Trip </a> </li>
-              <li> <a
-                  class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
-                  href="/admin/trips?type=family-gathering"
-                > Family Gathering </a> </li>
+                  href="/admin/trips"
+                  >Semua Perjalanan</a> </li>
             </ul> <!-- End List -->
           </div>
           <div class="border-gray-200 mt-3 flex flex-col border-t pt-3 first:mt-0 first:border-t-0 first:pt-0"> 
@@ -208,6 +200,21 @@
                   class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
                   href="/admin/services"
                   > Layanan </a> </li>
+            </ul> <!-- End List -->
+          </div>
+          <div class="border-gray-200 mt-3 flex flex-col border-t pt-3 first:mt-0 first:border-t-0 first:pt-0"> 
+            <span
+              class="text-gray-800 mb-2 block ps-2.5 text-xs font-medium uppercase"
+            > Pesananan </span> <!-- List -->
+            <ul class="flex flex-col gap-y-1">
+              <li> <a
+                  class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
+                  href="/admin/bookings"
+                > Perjalanan </a> </li>
+              <li> <a
+                  class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
+                  href="/admin/rental-bookings"
+                  > Produk </a> </li>
             </ul> <!-- End List -->
           </div>
           <div class="border-gray-200 mt-3 flex flex-col border-t pt-3 first:mt-0 first:border-t-0 first:pt-0"> <span

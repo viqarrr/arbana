@@ -13,7 +13,7 @@ class Trip extends Model
     use HasFactory;
 
     protected $fillable = [
-        'mountain_id',
+        'destination_id',
         'type',
         'title',
         'slug',
@@ -33,9 +33,9 @@ class Trip extends Model
         'price' => 'decimal:2'
     ];
 
-    public function mountain(): BelongsTo
+    public function destination(): BelongsTo
     {
-        return $this->belongsTo(Mountain::class);
+        return $this->belongsTo(Destination::class);
     }
 
     public function bookings(): HasMany

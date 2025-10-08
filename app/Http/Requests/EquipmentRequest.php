@@ -16,9 +16,9 @@ class EquipmentRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'stock_quantity' => 'required|integer|min:0',
-            'price_1day' => 'required|numeric|min:0',
-            'price_2days' => 'required|numeric|min:0',
+            'stock_quantity' => 'required|numeric|min:0',
+            'price_one_day' => 'required|numeric|min:0',
+            'price_two_days' => 'required|numeric|min:0',
             'price_extra_per_day' => 'required|numeric|min:0',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ];
