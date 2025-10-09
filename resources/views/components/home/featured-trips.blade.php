@@ -1,6 +1,8 @@
+@props(['trips'])
+
 <!-- Open Trip  -->
 <section class="mx-auto max-w-8xl px-4 pb-10 lg:pb-16">
-    <div class="flex flex-col md:justify-between md:items-center w-full lg:justify-center gap-4 pb-10 pt-20 lg:px-24">
+    <div class="flex flex-col md:justify-bet  ween md:items-center w-full lg:justify-center gap-4 pb-10 pt-20 lg:px-24">
         <h1 class="text-3xl font-semibold">Open Trip</h1>
         <h1 class="text-gray-500 mt-2 text-xl font-normal">
             Discover Your Next Adventure with Our Featured Trip Deals
@@ -8,7 +10,6 @@
     </div>
     {{-- List --}}
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-24">
-        {{-- Card 1 --}}
         <a href="/trips" class="bg-white overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl cursor-pointer">
             <div class="relative">
                 <img src="{{ url('storage/images/penanggungan.webp') }}" alt="Penanggungan"
@@ -20,7 +21,7 @@
                     Trip</span>
 
                 <div class="my-3">
-                    <h4 class="text-gray-900 mb-1 text-lg font-bold leading-tight">Mount Penanggungan</h4>
+                    <h4 class="text-gray-900 mb-1 text-lg font-bold leading-tight">{{ $trip->title }}</h4>
                 </div>
 
                 <ul class="mt-2 flex flex-col gap-2">
@@ -32,7 +33,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
                         </svg>
-                        <p class="text-gray-500 text-sm font-medium">Mojokerto</p>
+                        <p class="text-gray-500 text-sm font-medium">{{ $trip->destination->region }}</p>
                     </li>
 
                     <li class="flex items-center gap-2">
@@ -41,7 +42,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M8 7V3m8 4V3m-9 8h10m-11 4h12m-15 4h18M5 7h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z" />
                         </svg>
-                        <p class="text-gray-500 text-sm font-medium">26 October 2025</p>
+                        <p class="text-gray-500 text-sm font-medium">{{ $trip->departure_date }}</p>
                     </li>
 
                     <li class="flex items-center gap-2">
@@ -50,169 +51,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        <p class="text-gray-500 text-sm font-medium">3 Days</p>
+                        <p class="text-gray-500 text-sm font-medium">{{ $trip->duration }} Days</p>
                     </li>
                 </ul>
 
                 <!-- harga -->
-                <p class="text-gray-900 mt-4 text-2xl font-extrabold leading-tight">Rp 350.000<span
-                        class="text-base font-normal">/pax</span></p>
+                <p class="text-gray-900 mt-4 text-2xl font-extrabold leading-tight">Rp
+                    {{ number_format($trip->price, 0, ',', '.') }}<span class="text-base font-normal">/pax</span></p>
             </div>
         </a>
         {{-- Card 1 --}}
-        <a href="/trips" class="bg-white overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl cursor-pointer">
-            <div class="relative">
-                <img src="{{ url('storage/images/butak.jpg') }}" alt="Penanggungan" class="h-40 w-full object-cover" />
-            </div>
-            <div class="p-4 pt-2">
-                <!-- label trip -->
-                <span class="bg-green-100 text-green-800 me-2 rounded-full px-2.5 pb-1 pt-0.5 text-xs font-medium">Open
-                    Trip</span>
-
-                <div class="my-3">
-                    <h4 class="text-gray-900 mb-1 text-lg font-bold leading-tight">Mount Buthak</h4>
-                </div>
-
-                <ul class="mt-2 flex flex-col gap-2">
-                    <li class="flex items-center gap-2">
-                        <svg class="text-gray-600 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">Malang</p>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-4 w-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10m-11 4h12m-15 4h18M5 7h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">26 October 2025</p>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-4 w-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">3 Days</p>
-                    </li>
-                </ul>
-
-                <!-- harga -->
-                <p class="text-gray-900 mt-4 text-2xl font-extrabold leading-tight">Rp 850.000<span
-                        class="text-base font-normal">/pax</span></p>
-            </div>
-        </a>
-        {{-- Card 2 --}}
-        <a href="/trips" class="bg-white overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl cursor-pointer">
-            <div class="relative">
-                <img src="{{ url('storage/images/Kelut.jpg') }}" alt="Penanggungan"
-                    class="h-40 w-full object-cover" />
-            </div>
-            <div class="p-4 pt-2">
-                <!-- label trip -->
-                <span class="bg-green-100 text-green-800 me-2 rounded-full px-2.5 pb-1 pt-0.5 text-xs font-medium">Open
-                    Trip</span>
-
-                <div class="my-3">
-                    <h4 class="text-gray-900 mb-1 text-lg font-bold leading-tight">Mount Kelud</h4>
-                </div>
-
-                <ul class="mt-2 flex flex-col gap-2">
-                    <li class="flex items-center gap-2">
-                        <svg class="text-gray-600 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">Blitar</p>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-4 w-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10m-11 4h12m-15 4h18M5 7h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">26 October 2025</p>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-4 w-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">Up to 3 Days</p>
-                    </li>
-                </ul>
-
-                <!-- harga -->
-                <p class="text-gray-900 mt-4 text-2xl font-extrabold leading-tight">Rp 850.000<span
-                        class="text-base font-normal">/pax</span></p>
-            </div>
-        </a>
-        {{-- Card 1 --}}
-        <a href="/trips" class="bg-white overflow-hidden rounded-xl shadow-lg transition hover:shadow-xl cursor-pointer">
-            <div class="relative">
-                <img src="{{ url('storage/images/kawi.webp') }}" alt="Penanggungan"
-                    class="h-40 w-full object-cover" />
-            </div>
-            <div class="p-4 pt-2">
-                <!-- label trip -->
-                <span class="bg-green-100 text-green-800 me-2 rounded-full px-2.5 pb-1 pt-0.5 text-xs font-medium">Open
-                    Trip</span>
-
-                <div class="my-3">
-                    <h4 class="text-gray-900 mb-1 text-lg font-bold leading-tight">Mount Kawi</h4>
-                </div>
-
-                <ul class="mt-2 flex flex-col gap-2">
-                    <li class="flex items-center gap-2">
-                        <svg class="text-gray-600 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">Malang</p>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-4 w-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10m-11 4h12m-15 4h18M5 7h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">26 October 2025</p>
-                    </li>
-
-                    <li class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-500 h-4 w-4" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <p class="text-gray-500 text-sm font-medium">3 Days</p>
-                    </li>
-                </ul>
-
-                <!-- harga -->
-                <p class="text-gray-900 mt-4 text-2xl font-extrabold leading-tight">Rp 350.000<span
-                        class="text-base font-normal">/pax</span></p>
-            </div>
-        </a>
     </div>
 </section>
 
@@ -419,8 +267,8 @@
                             class="text-base font-normal">/pax</span></p>
                 </div>
             </div>
-            
-            
+
+
             {{-- Card lainnya tinggal ulangi --}}
             <a href="/priv-trips"
                 class="trip-card bg-white rounded-xl shadow-lg h-80 min-w-[280px] snap-start shrink-0 overflow-hidden"
@@ -437,7 +285,7 @@
                             class="text-base font-normal">/pax</span></p>
                 </div>
             </a>
-            
+
             {{-- Card lainnya tinggal ulangi --}}
             <a href="/priv-trips"
                 class="trip-card bg-white rounded-xl shadow-lg h-80 min-w-[280px] snap-start shrink-0 overflow-hidden"
@@ -454,8 +302,8 @@
                             class="text-base font-normal">/pax</span></p>
                 </div>
             </a>
-            
-            
+
+
             {{-- Card lainnya tinggal ulangi --}}
             <a href="/priv-trips"
                 class="trip-card bg-white rounded-xl shadow-lg h-80 min-w-[280px] snap-start shrink-0 overflow-hidden"
@@ -887,82 +735,81 @@
 <!--        </div>-->
 <!--</section>-->
 <script>
-   document.addEventListener("DOMContentLoaded", () => {
-    const carousels = document.querySelectorAll(".carousel-wrapper");
+    document.addEventListener("DOMContentLoaded", () => {
+        const carousels = document.querySelectorAll(".carousel-wrapper");
 
-    carousels.forEach((carousel) => {
-        let scrollAmount = 0;
-        const cardWidth = parseInt(carousel.dataset.cardWidth) || 280;
-        const step = parseInt(carousel.dataset.step) || 1;
-        const scrollStep = cardWidth * step;
+        carousels.forEach((carousel) => {
+            let scrollAmount = 0;
+            const cardWidth = parseInt(carousel.dataset.cardWidth) || 280;
+            const step = parseInt(carousel.dataset.step) || 1;
+            const scrollStep = cardWidth * step;
 
-        let interval;
+            let interval;
 
-        function startAutoScroll() {
-            if (window.innerWidth >= 768 && !interval) {
-                interval = setInterval(() => {
-                    scrollAmount += scrollStep;
-                    if (scrollAmount + carousel.clientWidth >= carousel.scrollWidth) {
-                        scrollAmount = 0;
-                    }
-                    carousel.scrollTo({
-                        left: scrollAmount,
-                        behavior: "smooth"
-                    });
-                }, 3000);
+            function startAutoScroll() {
+                if (window.innerWidth >= 768 && !interval) {
+                    interval = setInterval(() => {
+                        scrollAmount += scrollStep;
+                        if (scrollAmount + carousel.clientWidth >= carousel.scrollWidth) {
+                            scrollAmount = 0;
+                        }
+                        carousel.scrollTo({
+                            left: scrollAmount,
+                            behavior: "smooth"
+                        });
+                    }, 3000);
+                }
             }
-        }
 
-        function stopAutoScroll() {
-            if (interval) {
-                clearInterval(interval);
-                interval = null;
+            function stopAutoScroll() {
+                if (interval) {
+                    clearInterval(interval);
+                    interval = null;
+                }
             }
-        }
 
-        // Start awal
-        startAutoScroll();
+            // Start awal
+            startAutoScroll();
 
-        // Hentikan atau start ulang pas resize
-        window.addEventListener("resize", () => {
-            if (window.innerWidth < 768) {
+            // Hentikan atau start ulang pas resize
+            window.addEventListener("resize", () => {
+                if (window.innerWidth < 768) {
+                    stopAutoScroll();
+                } else {
+                    startAutoScroll();
+                }
+            });
+
+            const nextBtn = carousel.parentElement.querySelector(".nextBtn");
+            const prevBtn = carousel.parentElement.querySelector(".prevBtn");
+
+            nextBtn?.addEventListener("click", () => {
+                scrollAmount += scrollStep;
+                if (scrollAmount > carousel.scrollWidth - carousel.clientWidth) {
+                    scrollAmount = carousel.scrollWidth - carousel.clientWidth;
+                }
+                carousel.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
                 stopAutoScroll();
-            } else {
-                startAutoScroll();
-            }
-        });
-
-        const nextBtn = carousel.parentElement.querySelector(".nextBtn");
-        const prevBtn = carousel.parentElement.querySelector(".prevBtn");
-
-        nextBtn?.addEventListener("click", () => {
-            scrollAmount += scrollStep;
-            if (scrollAmount > carousel.scrollWidth - carousel.clientWidth) {
-                scrollAmount = carousel.scrollWidth - carousel.clientWidth;
-            }
-            carousel.scrollTo({
-                left: scrollAmount,
-                behavior: "smooth"
             });
-            stopAutoScroll();
-        });
 
-        prevBtn?.addEventListener("click", () => {
-            scrollAmount -= scrollStep;
-            if (scrollAmount < 0) scrollAmount = 0;
-            carousel.scrollTo({
-                left: scrollAmount,
-                behavior: "smooth"
+            prevBtn?.addEventListener("click", () => {
+                scrollAmount -= scrollStep;
+                if (scrollAmount < 0) scrollAmount = 0;
+                carousel.scrollTo({
+                    left: scrollAmount,
+                    behavior: "smooth"
+                });
+                stopAutoScroll();
             });
-            stopAutoScroll();
-        });
 
-        // Hentikan auto scroll saat hover
-        carousel.addEventListener("mouseenter", stopAutoScroll);
-        carousel.addEventListener("mouseleave", startAutoScroll);
+            // Hentikan auto scroll saat hover
+            carousel.addEventListener("mouseenter", stopAutoScroll);
+            carousel.addEventListener("mouseleave", startAutoScroll);
+        });
     });
-});
-
 </script>
 <style>
     /* Hilangkan scrollbar di semua browser */

@@ -22,8 +22,9 @@ class AboutExcellenceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(AboutExcellenceRequest $request, AboutExcellence $aboutExcellence)
+    public function update(AboutExcellenceRequest $request)
     {
+        $aboutExcellence = AboutExcellence::firstOrFail();
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
@@ -35,7 +36,6 @@ class AboutExcellenceController extends Controller
 
         $aboutExcellence->update($data);
 
-        return redirect()->route('admin.excellence.index')
-            ->with('success', 'Keunggulan berhasil diperbarui.');
+        return redirect()->route('admin.excellence.index')->with('success', 'Keunggulan berhasil diperbarui.');
     }
 }

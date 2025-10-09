@@ -19,7 +19,7 @@ class Equipment extends Model
         'price_one_day',
         'price_two_days', 
         'price_extra_per_day',
-        'image_path'
+        'image'
     ];
 
     protected $casts = [

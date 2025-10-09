@@ -5,11 +5,10 @@
         <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             <!-- Logo & Deskripsi -->
             <div class="footer-logo md:w-1/4">
-                <img src="{{ url('storage/images/arbana outdoor real.png') }}" alt="Company Logo" class="mb-4 "
+                <img src="{{ url('storage/logo /arbana outdoor real.png') }}" alt="Company Logo" class="mb-4 "
                     style="width: calc(var(--spacing) * 31);" />
                 <p class="text-sm leading-relaxed">
-                    Explore the beauty of Mount Bromo and its surroundings with us. An exciting adventure, an
-                    unforgettable experience.
+                    {{ $information->footer_description }}
                 </p>
             </div>
 
@@ -36,14 +35,14 @@
                 <h3 class="text-white mb-4 text-lg font-semibold">Follow Us</h3>
                 <div class="social-icons flex space-x-4">
                     <!-- TikTok -->
-                    <a href="#"
+                    <a href="{{ $contacts->where('label', 'TikTok')->first()->url }}"
                         class="bg-neutral-800 inline-flex h-10 w-10 items-center justify-center rounded-full transition"
                         style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#000000'"
                         onmouseout="this.style.backgroundColor='#262626'">
                         <i class="fab fa-tiktok text-white"></i>
                     </a>
                     <!-- Instagram -->
-                    <a href="#"
+                    <a href="{{ $contacts->where('label', 'Instagram')->first()->url }}"
                         class="bg-neutral-800 inline-flex h-10 w-10 items-center justify-center rounded-full transition"
                         style="transition: background 0.3s;"
                         onmouseover="this.style.background='linear-gradient(45deg,#feda75,#d62976,#962fbf)'"
@@ -51,21 +50,21 @@
                         <i class="fab fa-instagram text-white"></i>
                     </a>
                     <!-- YouTube -->
-                    <a href="#"
+                    <a href="{{ $contacts->where('label', 'YouTube')->first()->url }}"
                         class="bg-neutral-800 inline-flex h-10 w-10 items-center justify-center rounded-full transition"
                         style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#ff0000'"
                         onmouseout="this.style.backgroundColor='#262626'">
                         <i class="fab fa-youtube text-white"></i>
                     </a>
                     <!-- Twitter (X) -->
-                    <a href="#"
+                    <a href="{{ $contacts->where('label', 'Twitter')->first()->url }}"
                         class="bg-neutral-800 inline-flex h-10 w-10 items-center justify-center rounded-full transition"
                         style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#1DA1F2'"
                         onmouseout="this.style.backgroundColor='#262626'">
                         <i class="fab fa-twitter text-white"></i>
                     </a>
                     <!-- Facebook -->
-                    <a href="#"
+                    <a href="{{ $contacts->where('label', 'Facebook')->first()->url }}"
                         class="bg-neutral-800 inline-flex h-10 w-10 items-center justify-center rounded-full transition"
                         style="transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#1877F2'"
                         onmouseout="this.style.backgroundColor='#262626'">

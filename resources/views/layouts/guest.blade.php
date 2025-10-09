@@ -34,7 +34,7 @@
     {{-- cdn animation --}}
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/animate.js'])
 
     <!-- Styles -->
     @livewireStyles
@@ -47,7 +47,7 @@
     <div class="text-gray-900 font-display md:overflow-x-hidden antialiased">
         {{ $slot }}
     </div>
-    <x-footer></x-footer>
+    <x-footer :contacts="$contacts" :information="$information"></x-footer>
 
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
@@ -57,7 +57,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 </body>
 
 </html>

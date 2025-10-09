@@ -223,12 +223,12 @@
             <ul class="flex flex-col gap-y-1">
               <li> <a
                   class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
-                  href="/admin/news"
-                > Berita </a> </li>
+                  href="/admin/posts"
+                > Postingan </a> </li>
               <li> <a
                   class="text-gray-500 hover:bg-gray-200 hover:text-gray-800 focus:outline-hidden focus:bg-gray-200 focus:text-gray-800 flex w-full items-center gap-x-2 rounded-lg px-2.5 py-2 text-sm"
                   href="/admin/contacts"
-                > Kontak </a> </li>
+                > Informasi & Kontak </a> </li>
             </ul> <!-- End List -->
           </div>
         </nav>

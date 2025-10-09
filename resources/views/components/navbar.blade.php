@@ -4,7 +4,7 @@
         class="relative mx-2 flex w-full max-w-5xl basis-full flex-wrap items-center justify-between py-2 px-5 md:flex-nowrap lg:mx-auto ">
         <!-- Logo -->
         <a href="/" class="flex items-center font-semibold text-primary gap-1.5 w-fit">
-            <img src="{{ url('storage/images/arbana outdoor real.png') }}" alt="Company Logo" class="w-9" />
+            <img src="{{ url('storage/logo/arbana outdoor real.png') }}" alt="Company Logo" class="w-9" />
             <h1 class="text-xs md:text-sm font-black leading-tight md:whitespace-nowrap">
                 ARBANA OUTDOOR
             </h1>
@@ -51,7 +51,7 @@
                     <a href="/services" class="text-white hover:text-amber-300">Service</a>
                 </li>
                 <li>
-                    <a href="/news" class="text-white hover:text-amber-300">News</a>
+                    <a href="/posts" class="text-white hover:text-amber-300">Posts</a>
                 </li>
                 <li>
                     <a href="https://wa.me/6288994300480" class="block md:hidden text-white hover:text-amber-300">Contact</a>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutDescriptionController;
 use App\Http\Controllers\AboutExcellenceController;
 use App\Http\Controllers\AboutHistoryController;
@@ -13,9 +14,14 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\FeaturedServiceController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformationController;
 use App\Http\Controllers\PopularDestinationController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PublicPostController;
+use App\Http\Controllers\PublicProductController;
 use App\Http\Controllers\PublicRentalController;
+use App\Http\Controllers\PublicServiceController;
 use App\Http\Controllers\PublicTripController;
 use App\Models\DestinationImage;
 use App\Models\FeaturedService;
@@ -32,50 +38,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/trips', function () {
-    return view('trips');
-});
-
-Route::get('/products', function () {
-    return view('products');
-});
-
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/services', function () {
-    return view('services');
-});
-
-Route::get('/gallery', function () {
-    return view('gallery');
-});
-
-Route::get('/news', function () {
-    return view('news');
-});
-Route::get('/detail-news', function () {
-    return view('detail-news');
-});
-
-Route::get('/trips', [PublicTripController::class, 'index'])->name('trips.index');
-Route::get('/trips/{trip:slug}', [PublicTripController::class, 'show'])->name('trips.show');
-Route::post('/trips/book', [PublicTripController::class, 'book'])->name('trips.book');
-
-Route::get('/products', [PublicRentalController::class, 'index'])->name('rentals.index');
-Route::get('/products/{equipment}', [PublicRentalController::class, 'show'])->name('rentals.show');
-Route::post('/products/calculate-price', [PublicRentalController::class, 'calculatePrice'])->name('rentals.calculate-price');
-Route::post('/products/book', [PublicRentalController::class, 'book'])->name('rentals.book');
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/products', [PublicProductController::class, 'index'])->name('products');
+Route::get('/services', [PublicServiceController::class, 'index'])->name('services');
+Route::get('/posts', [PublicPostController::class, 'index'])->name('public-posts.index');
+Route::get('/posts/{slug}', [PublicPostController::class, 'show'])->name('public-posts.show');
 
 Route::middleware([
     'auth:sanctum',
@@ -105,6 +73,7 @@ Route::middleware([
     Route::resource('services', ServiceController::class)->except(['show', 'create', 'edit']);
     Route::resource('posts', PostController::class)->except(['show', 'create', 'edit']);
     Route::resource('contacts', ContactController::class)->except(['show', 'create', 'edit']);
+    Route::put('information/{id}', [InformationController::class, 'update'])->name('information.update');
 
     Route::resource('bookings', AdminBookingController::class)->except(['show', 'create', 'edit']);
     Route::patch('bookings/{booking}/status', [AdminBookingController::class, 'updateStatus'])->name('bookings.update-status');

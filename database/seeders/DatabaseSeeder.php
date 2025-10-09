@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             DestinationSeeder::class,
             TripSeeder::class,
             EquipmentSeeder::class,
-            ServiceSeeder::class,
+            AboutSeeder::class,
             BookingSeeder::class,
             RentalBookingSeeder::class,
         ]);

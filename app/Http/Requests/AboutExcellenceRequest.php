@@ -23,7 +23,7 @@ class AboutExcellenceRequest extends FormRequest
     {
         return [
             'heading' => 'required|string|max:255',
-            'paragraph' => 'required|string|max:255',
+            'paragraph' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ];
     }

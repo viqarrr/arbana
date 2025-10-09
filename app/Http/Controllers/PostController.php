@@ -42,10 +42,9 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(PostRequest $request, Post $post): RedirectResponse
+    public function update(PostRequest $request, Post $post)
     {
         $data = $request->validated();
-
         if ($request->hasFile('image')) {
             if ($post->image) {
                 Storage::disk('public')->delete($post->image);
@@ -54,6 +53,7 @@ class PostController extends Controller
         }
 
         $post->update($data);
+
 
         return redirect()->route('admin.posts.index')
             ->with('success', 'Postingan berhasil diperbarui.');

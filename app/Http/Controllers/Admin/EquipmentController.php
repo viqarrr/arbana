@@ -31,7 +31,7 @@ class EquipmentController extends Controller
             ->with('success', 'Produk berhasil ditambahkan.');
     }
 
-    public function update(EquipmentRequest $request, Equipment $product): RedirectResponse
+    public function update(EquipmentRequest $request, Equipment $product)
     {
         $data = $request->validated();
 

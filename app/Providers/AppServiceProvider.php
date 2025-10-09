@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Contact;
+use App\Models\Information;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if (!request()->is('admin/*')) {
+            View::share('contacts', Contact::all());
+            View::share('information', Information::first());
+        }
     }
 }

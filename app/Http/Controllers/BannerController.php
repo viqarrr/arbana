@@ -28,7 +28,7 @@ class BannerController extends Controller
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('equipment', 'public');
+            $data['image'] = $request->file('image')->store('banner', 'public');
         }
 
         Banner::create($data);

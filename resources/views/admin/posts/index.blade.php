@@ -183,7 +183,7 @@
                     <input
                       type="text"
                       name="title"
-                      value="{{ $post->title }}"
+                      value="{{ old('title', $post->title) }}"
                       class="border-gray-300 focus:border-blue-500 w-full rounded-lg border px-4 py-2.5 text-sm"
                       required
                     >
@@ -198,10 +198,11 @@
                       x-init="const quill = new Quill($refs.quillEditor, { theme: 'snow' });
                       quill.on('text-change', () => $refs.hiddenContent.value = quill.root.innerHTML);"
                     >
-                      <div x-ref="quillEditor" class="min-h-20">{!! $post->content !!}</div>
+                      <div x-ref="quillEditor" class="min-h-20">{!! old('content', $post->content) !!}</div>
                       <input
                         type="hidden"
                         name="content"
+                        value="{{ old('content', $post->content) }}"
                         x-ref="hiddenContent"
                       >
                     </div>

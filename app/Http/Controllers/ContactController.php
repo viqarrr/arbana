@@ -7,6 +7,7 @@ use App\Http\Requests\ContactRequest;
 use App\Http\Requests\PostRequest;
 use App\Models\Banner;
 use App\Models\Contact;
+use App\Models\Information;
 use App\Models\Post;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -21,7 +22,9 @@ class ContactController extends Controller
     public function index(): View
     {
         $contacts = Contact::paginate('5');
-        return view('admin.contacts.index', compact('contacts'));
+        $information = Information::first();
+
+        return view('admin.contacts.index', compact('contacts', 'information'));
     }
 
     /**
